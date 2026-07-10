@@ -1,0 +1,42 @@
+# dependências
+node_modules/
+
+# variáveis de ambiente / credenciais
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build / cache
+dist/
+build/
+.cache/
+.npm/
+
+# Arquivos temporários do projeto
+tarefas.txt
+modelo_database
+*.tmp
+
+# Testes / coverage
+coverage/
+
+# Pacotes gerados
+*.tgz
