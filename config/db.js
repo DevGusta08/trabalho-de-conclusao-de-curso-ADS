@@ -3,7 +3,7 @@
 // importa o pacote, le o arquivo .env e injeta no process.env (usado para que valores não fique exposto ao usuário).
 require('dotenv').config()
 
-const mysql = require('mysql2')
+const mysql = require('mysql2/promise')
 
 // permite múltiplas conexões simultâneas, necessário porque a API pode receber várias requisições ao mesmo tempo.
 const pool = mysql.createPool({
