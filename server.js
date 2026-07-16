@@ -12,9 +12,9 @@ const port = 3000;
 
 // Método básico de Rota com GET
 app.get('/', (req, res) => {
-    res.send('Hello World')
+    res.send('Servidor ligado!')
 });
 
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`)
-});
+app.get('/usuarios', async (req, res) => { const [usuarios] = await pool.query('SELECT * FROM usuarios'); res.json(usuarios) });
+
+app.listen(port, () => { console.log(`Servidor rodando na porta ${port}`) });
