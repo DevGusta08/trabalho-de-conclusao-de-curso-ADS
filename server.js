@@ -8,13 +8,21 @@ const pool = require('./config/db')
 
 // Cria a aplicação express
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Método básico de Rota com GET
 app.get('/', (req, res) => {
-    res.send('Servidor ligado!')
+    res.send('Servidor ligado!');
 });
 
-app.get('/usuarios', async (req, res) => { const [usuarios] = await pool.query('SELECT * FROM usuarios'); res.json(usuarios) });
+app.get('/usuarios', async (req, res) => {
+    try {
+    const [usuarios] = await pool.query('SELECT * FROM usuarios'); 
+    res.json(usuarios);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({erro: 'Deu erro jovem senhor.'});
+    }
+});
 
 app.listen(port, () => { console.log(`Servidor rodando na porta ${port}`) });
