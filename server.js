@@ -9,6 +9,7 @@ const usuariosRoutes = require('./routes/usuarios.routes');
 app.get('/', (req, res) => {
     res.send('Servidor ligado!');
 });
+app.use(express.json())
 
 app.use(usuariosRoutes);
 app.listen(port, () => { console.log(`Servidor rodando na porta ${port}`) });
