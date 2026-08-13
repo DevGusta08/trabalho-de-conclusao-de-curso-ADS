@@ -7,52 +7,53 @@
 </head>
 
 <body>
-        <main class="Login-container">
+    <section class="login-info">
+        <div class="logo">
+            <span>Vest+</span>
+        </div>
+    
+        <h1>Bem-vindo ao Vest+</h1>
+        <p>Sua preparação para o vestibular começa aqui.</p>
+    </section>
+    
+        <section class="login-form">
 
-        <section class="Login-info">
-            <div class="logo">
-                <span>VEST+</span>
-            </div>
-
-            <h1>VEST+</h1>
-            <p>Bem-Vindo!</p>
-            <p>Entre com suas credenciais para continuar.</p>
-        </section>
-
-        <section class="Login-form">
-            <h2>Entrar</h2>
-
-            <p>Preencha seus dados para acessar sua conta.</p>
-
-            <form action="#" method="post">
-
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
-                </div>
-
-                <div>
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
-                </div>
-
-                <div> 
-                    <label>
-                        <input type="checkbox" name="Lembrar">
-                        Lembrar de mim
-                    </label>
+            <section class="login-form">
+                <h2>Entrar</h2>
+                <p>Preencha seus dados para acessar sua conta.</p>
+            
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                    </div>
+            
+                    <div class="form-options">
+                        <label for="lembrar">
+                            <input type="checkbox" id="lembrar" name="lembrar">
+                            Lembrar de mim
+                        </label>
+            
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+            
 
                     <a href="#">Esqueci minha senha</a>
                 </div>
                 
                 <button type="submit">Entrar</button>
-                <p>
+
+                <p class="signup-text">
                     Ainda não tem conta?
                     <a href="#">Criar conta</a>
                 </p>
             </form>
-            
-        </section>
-        
+        </section>        
+    </main>
 </body>
 </html>
