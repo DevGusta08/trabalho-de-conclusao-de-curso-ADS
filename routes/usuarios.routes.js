@@ -6,5 +6,6 @@ const usuariosController = require('../controllers/usuarios.controller');
 router.get('/usuarios', usuariosController.listar);
 router.get('/usuarios/:id', usuariosController.buscarPorId);
 router.post('/usuarios', usuariosController.criar);
+router.put('/usuarios/:id', usuariosController.atualizar);
 
 module.exports = router;

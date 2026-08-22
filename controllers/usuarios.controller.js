@@ -42,5 +42,19 @@ async function criar(req, res) {
     }    
 };
 
+// cria lógica de atualização de usuário
+async function atualizar(req, res ){
+    try {
+        const {id} = req.params;
+        const {nome, email} = req.body;
+        await pool.query('UPDATE usuarios SET nome = ?, email = ? WHERE id = ?', [nome, email, id]);
+
+        res.status(200).json({mensagem: 'Usuário atualizado com sucesso!'});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: 'Deu erro'});
+    }
+}
+
 // exporta as funções
-module.exports = {listar, buscarPorId, criar};
+module.exports = {listar, buscarPorId, criar, atualizar};
