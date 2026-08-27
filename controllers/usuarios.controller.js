@@ -56,5 +56,18 @@ async function atualizar(req, res ){
     }
 }
 
+// função Delete do CRUD
+async function deletar(req, res) {
+    try {
+        const {id} = req.params;
+        await pool.query('DELETE FROM usuarios WHERE id = ?', [id])
+
+        res.status(200).json({mensagem: 'Usuário deletado com sucesso!'})
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: 'Deu erro'})
+    }
+}
+
 // exporta as funções
-module.exports = {listar, buscarPorId, criar, atualizar};
+module.exports = {listar, buscarPorId, criar, atualizar, deletar};
