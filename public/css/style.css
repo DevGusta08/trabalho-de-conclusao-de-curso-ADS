@@ -25,15 +25,13 @@ html {
 }
 
 .login-info {
-    background-image: url('../img/foto1.png'); /* caminho da imagem */
-    background-size: cover;       /* cobre toda a área */
-    background-position: center;  /* centraliza a imagem */
-    background-repeat: no-repeat; /* não repete a imagem */
-    color: white;                 /* texto branco para contraste */
+    background-image: url('../img/foto1.png'); 
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    color: white;                 
     padding: 40px;
-    border-radius: 10px;
     max-width: 350px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .login-info h1 {
@@ -48,9 +46,7 @@ html {
 
 .login-form {
     padding: 40px;
-    border-radius: 10px;
     max-width: 350px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .login-form h2 {
