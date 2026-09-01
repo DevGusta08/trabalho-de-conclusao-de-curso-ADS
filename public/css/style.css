@@ -158,19 +158,23 @@ button[type="submit"]:hover {
         max-width: 100%;
         width: 100%;
         margin-bottom: 0;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 20px;
-        background-color: #e0f7fa; /* Cor de fundo para destacar */
+        border-radius: 22px;
+        padding: 24px;
+        background-color: #e0f7fa;
     }
     .login-info {
-        color: #1e90ff;
+        color: #feffff;
         background-color: transparent;
         text-align: center;
     }
+
+    .login-info h1,
+    .login-info p {
+    margin: 0 0 8px;
+    }
     .login-form {
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        background-color: #ffffff;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         border-radius: 10px;
     }
 }
