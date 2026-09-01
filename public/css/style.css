@@ -123,3 +123,34 @@ button[type="submit"]:hover {
 .signup-text a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items: center;
+        background-color: #e0f7fa;
+    }
+    .login-info, .login-form {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 0;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+        background-color: #e0f7fa; /* Cor de fundo para destacar */
+    }
+    .login-info {
+        color: #1e90ff;
+        background-color: transparent;
+        text-align: center;
+    }
+    .login-form {
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+}
