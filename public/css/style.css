@@ -143,15 +143,16 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 764px) {
     .login-container {
         flex-direction: column;
-        padding: 20px;
+        padding: 24px 16px;
         height: auto;
-        justify-content: flex-start;
-        gap: 20px;
+        min-height: 100vh;
+        justify-content: center;
+        gap: 24px;
         align-items: center;
-        background-color: #e0f7fa;
+        background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%);
     }
     .login-info, .login-form {
         max-width: 100%;
