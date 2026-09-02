@@ -8,22 +8,30 @@ html {
     color: #333;
 }
 
-.login-container {
+.login-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    width: 100vw;
+}
+
+.login-container {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .login-info {
-    background-image: url('../img/foto1.png'); /* caminho da imagem */
-    background-size: cover;       /* cobre toda a área */
-    background-position: center;  /* centraliza a imagem */
-    background-repeat: no-repeat; /* não repete a imagem */
-    color: white;                 /* texto branco para contraste */
+    background-image: url('../img/foto1.png'); 
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    color: white;                 
     padding: 40px;
-    border-radius: 10px;
     max-width: 350px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .login-info h1 {
@@ -36,11 +44,17 @@ html {
     font-size: 1.1rem;
 }
 
+.login-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 24px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
 .login-form {
     padding: 40px;
-    border-radius: 10px;
     max-width: 350px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .login-form h2 {
@@ -59,12 +73,14 @@ html {
 }
 
 .form-group input {
-    width: 100%;
+    width: 90%;
     padding: 10px 12px;
     border: 1.5px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+    margin: 0 auto;
+    display: block;
 }
 
 .form-group input:focus {
@@ -127,33 +143,38 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 764px) {
     .login-container {
         flex-direction: column;
-        padding: 20px;
+        padding: 24px 16px;
         height: auto;
-        justify-content: flex-start;
-        gap: 20px;
+        min-height: 100vh;
+        justify-content: center;
+        gap: 24px;
         align-items: center;
-        background-color: #e0f7fa;
+        background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%);
     }
     .login-info, .login-form {
         max-width: 100%;
         width: 100%;
         margin-bottom: 0;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 20px;
-        background-color: #e0f7fa; /* Cor de fundo para destacar */
+        border-radius: 22px;
+        padding: 24px;
+        background-color: #e0f7fa;
     }
     .login-info {
-        color: #1e90ff;
+        color: #feffff;
         background-color: transparent;
         text-align: center;
     }
+
+    .login-info h1,
+    .login-info p {
+    margin: 0 0 8px;
+    }
     .login-form {
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        background-color: #ffffff;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         border-radius: 10px;
     }
 }
