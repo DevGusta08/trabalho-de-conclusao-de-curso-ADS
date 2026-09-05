@@ -3,8 +3,9 @@
 }
 
 html, body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    overflow: hidden;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -17,7 +18,7 @@ html, body {
     width: 100%;
     max-width: clamp(320px, 90%, 30rem);
     margin: 24px;
-    padding: 32px;
+    padding: 16px 20px;    
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -25,21 +26,21 @@ html, body {
 }
 
 .register-container h1 {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     color: #0d8e8b;
-    font-size: 2.4rem;
+    font-size: 2.0rem;
 }
 
 .register-container label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     font-weight: 600;
     text-align: center;
 }
 
 .register-container input {
     width: 90%;
-    padding: 10px 12px;
+    padding: 6px 10px;
     border: 1.5px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
@@ -55,7 +56,7 @@ html, body {
 
 .register-container button[type="submit"] {
     width: 90%;
-    padding: 12px;
+    padding: 10px;
     background-color: #0d8e8b;
     color: #ffffff;
     font-size: 1.1rem;
@@ -66,7 +67,7 @@ html, body {
 }
 
 .register-container p {
-    margin-top: 20px;
+    margin-top: 12px;
     font-size: 0.95rem;
 }
 
