@@ -79,3 +79,14 @@ html, body {
 .register-container p a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 764px) {
+    html, body {
+        background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%);
+    }
+
+    .register-container {
+        border-radius: 22px;
+        padding: 24px;
+    }
+}
