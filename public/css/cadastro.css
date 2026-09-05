@@ -30,6 +30,9 @@ html, body {
     font-size: 2.4rem;
 }
 
-.register-container form {
-    font-size: 19px;
+.register-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    text-align: left;
 }
