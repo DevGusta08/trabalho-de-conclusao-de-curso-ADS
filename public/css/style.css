@@ -84,7 +84,7 @@ html {
 }
 
 .form-group input:focus {
-    border-color: #1e90ff;
+    border-color: #0d8e8b;
     outline: none;
 }
 

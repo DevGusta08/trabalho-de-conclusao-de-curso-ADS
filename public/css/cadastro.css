@@ -34,5 +34,21 @@ html, body {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
+}
+
+.register-container input {
+    width: 90%;
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin: 0 auto;
+    display: block;
+    transition: border-color 0.3s ease;
+}
+
+.register-container input:focus {
+    border-color: #0d8e8b;
+    outline: none;
 }
