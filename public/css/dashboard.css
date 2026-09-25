@@ -20,3 +20,42 @@
   margin: 2rem auto;
   padding: 0 1rem;
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-titulo {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.sidebar-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-lista button {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sidebar-lista button:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar-lista button.area-ativa {
+  background-color: #e1f5f4;
+  color: #0d8e8b;
+  font-weight: 500;
+}
+

@@ -8,6 +8,32 @@ if (!usuario) {
 document.getElementById("nome-usuario").textContent = `Olá, ${usuario.nome}`;
 const areasContainer = document.getElementById("areas-container");
 
+const listaAreas = document.getElementById("lista-areas");
+let areaSelecionada = areas[0].nome; // começa com a primeira área selecionada
+
+function renderizarSidebar() {
+  listaAreas.innerHTML = "";
+
+  areas.forEach((area) => {
+    const botao = document.createElement("button");
+    botao.textContent = area.nome;
+
+    if (area.nome === areaSelecionada) {
+      botao.classList.add("area-ativa");
+    }
+
+    botao.addEventListener("click", () => {
+      areaSelecionada = area.nome;
+      renderizarSidebar(); // redesenha a sidebar pra marcar o botão certo
+      // (aqui depois vamos chamar a função que redesenha os cards de matéria)
+    });
+
+    listaAreas.appendChild(botao);
+  });
+}
+
+renderizarSidebar();
+
 // cria cards para ser inserido no HTML
 areas.forEach((area) => {
   const areaDiv = document.createElement("div");
