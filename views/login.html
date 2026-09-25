@@ -22,7 +22,7 @@
                 <div class="login-box">
                     <h2>Entrar</h2>
                     <p>Preencha seus dados para acessar sua conta.</p>
-                    <form action="#" method="post">
+                    <form id="form-login" method="post">
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input 
@@ -53,10 +53,12 @@
                             Ainda não tem conta?
                             <a href="cadastro.html">Criar conta</a>
                         </p>
+                        <p id="erro-login" style="color: red;"></p>
                     </form>
                 </div>
             </section>
         </main>
     </div>
+    <script src="../public/js/login.js"></script>
 </body>
 </html>

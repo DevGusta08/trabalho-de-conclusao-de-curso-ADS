@@ -12,7 +12,7 @@
 <body>
     <div class="register-container">
         <h1>Crie sua conta</h1>
-        <form action="#" method="post">
+        <form id="form-cadastro" method="post">
             <div class="form-group">
                 <label for="nome">Nome completo</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required /><br /><br />
@@ -34,6 +34,8 @@
         <p>
             Já tem uma conta? <a href="login.html">Entrar</a>
         </p>
+        <p id="erro-cadastro" style="color: red;"></p>
     </div>
+    <script src="../public/js/cadastro.js"></script>
 </body>
 </html>
