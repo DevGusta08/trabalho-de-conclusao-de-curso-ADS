@@ -11,3 +11,12 @@
   font-weight: bold;
   font-size: 1.25rem;
 }
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}

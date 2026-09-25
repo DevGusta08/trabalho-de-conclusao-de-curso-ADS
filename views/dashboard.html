@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="../public/css/dashboard.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vest+</title>
+    <title>Dashboard - Vest+</title>
+    <link rel="stylesheet" href="../public/css/dashboard.css">
 </head>
 <body>
     <header class="dashboard-header">
         <span class="logo">Vest+</span>
         <span id="nome-usuario"></span>
     </header>
-    <main class="dashboard-container">
-        <div id="areas-container">
-            
-        </div>
-    </main>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <p class="sidebar-titulo">Áreas</p>
+            <nav id="lista-areas" class="sidebar-lista">
+                <!-- botões de área inseridos aqui pelo JS -->
+            </nav>
+        </aside>
+        <main class="conteudo-principal">
+            <div class="abas">
+                <button class="aba aba-ativa" data-aba="a-fazer">A fazer</button>
+                <button class="aba" data-aba="feitas">Feitas</button>
+            </div>
+            <section class="destaques">
+                <p class="secao-titulo">Em destaque</p>
+                <div id="destaques-container" class="destaques-grid">
+                    <!-- os 2 cards de destaque inseridos aqui pelo JS -->
+                </div>
+            </section>
+            <section class="materias">
+                <p class="secao-titulo">Matérias</p>
+                <div id="materias-container" class="materias-grid">
+                    <!-- cards de matéria inseridos aqui pelo JS -->
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="../public/js/dados-dashboard.js"></script>
     <script src="../public/js/dashboard.js"></script>
 </body>
