@@ -1,0 +1,13 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0d8e8b;
+  color: white;
+}
+
+.dashboard-header .logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
