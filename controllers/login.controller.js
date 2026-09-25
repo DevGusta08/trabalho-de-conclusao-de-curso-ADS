@@ -18,7 +18,14 @@ async function login(req, res) {
             return res.status(401).json({error: 'Email ou senha inválidos'})
         }
 
-        res.status(200).json({mensagem: 'Login realizado com sucesso!'});
+        res.status(200).json({
+            mensagem: 'Login realizado com sucesso!',
+            usuario: {
+            id: usuario.id,
+            nome: usuario.nome,
+            email: usuario.email
+            }
+        });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Deu erro' });
