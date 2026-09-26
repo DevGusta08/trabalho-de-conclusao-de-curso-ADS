@@ -3,7 +3,7 @@ html {
     width: 100vw;
     overflow: hidden;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     background-color: #f0f2f5;
     color: #333;
 }
@@ -25,6 +25,7 @@ html {
 }
 
 .login-info {
+    font-family: "Sora", sans-serif;
     background-image: linear-gradient(rgba(13, 142, 139, 0.55), rgba(13, 142, 139, 0.55)), url('../img/foto1.png'); 
     background-size: cover;       
     background-position: center;  
@@ -53,11 +54,13 @@ html {
 }
 
 .login-form {
+    font-family: "Inter", sans-serif;
     padding: 40px;
     max-width: 350px;
 }
 
 .login-form h2 {
+    font-family: "Sora", sans-serif;
     margin-bottom: 20px;
     color: #0d8e8b;
 }
@@ -113,6 +116,7 @@ html {
 }
 
 button[type="submit"] {
+    font-family: "Inter", sans-serif;
     width: 100%;
     padding: 12px;
     background-color: #0d8e8b;
@@ -164,7 +168,7 @@ button[type="submit"]:hover {
         background-color: #e0f7fa;
     }
     .login-info {
-        color: #0d5c5a;
+        color: #ffffff;
         background-color: transparent;
         text-align: center;
     }
