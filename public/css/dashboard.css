@@ -21,6 +21,30 @@
   padding: 0 1rem;
 }
 
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.destaque-card {
+  background-color: #e1f5f4;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.destaque-label {
+  margin: 0 0 4px 0;
+  font-size: 0.75rem;
+  color: #0d8e8b;
+}
+
+.destaque-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -59,3 +83,45 @@
   font-weight: 500;
 }
 
+.abas {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+.abas .aba {
+  padding: 0.6rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #888;
+  border-bottom: 2px solid transparent;
+}
+.abas .aba:hover {
+  color: #0d8e8b;
+}
+.abas .aba-ativa {
+  color: #0d8e8b;
+  font-weight: 600;
+  border-bottom: 2px solid #0d8e8b;
+}
+
+.materias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.materia-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.materia-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
