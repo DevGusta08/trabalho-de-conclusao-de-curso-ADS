@@ -25,11 +25,11 @@ html {
 
 .login-info {
     font-family: "Sora", sans-serif;
-    background-image: linear-gradient(rgba(13, 142, 139, 0.55), rgba(13, 142, 139, 0.55)), url('../img/foto1.png'); 
-    background-size: cover;       
-    background-position: center;  
-    background-repeat: no-repeat; 
-    color: white;                 
+    background-image: linear-gradient(rgba(13, 142, 139, 0.55), rgba(13, 142, 139, 0.55)), url('../img/foto1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
     padding: 40px;
     max-width: 350px;
 }
@@ -106,7 +106,7 @@ html {
 }
 
 .form-options a {
-    color: #0d8e8b; 
+    color: #0d8e8b;
     text-decoration: none;
 }
 
@@ -138,7 +138,7 @@ button[type="submit"]:hover {
 }
 
 .signup-text a {
-    color: #0d8e8b ;
+    color: #0d8e8b;
     text-decoration: none;
     font-weight: 600;
 }
@@ -158,7 +158,9 @@ button[type="submit"]:hover {
         align-items: center;
         background-color: #f0f2f5;
     }
-    .login-info, .login-form {
+
+    .login-info,
+    .login-form {
         max-width: 100%;
         width: 100%;
         margin-bottom: 0;
@@ -166,6 +168,7 @@ button[type="submit"]:hover {
         padding: 24px;
         background-color: #e0f7fa;
     }
+
     .login-info {
         color: #ffffff;
         background-color: transparent;
@@ -174,11 +177,12 @@ button[type="submit"]:hover {
 
     .login-info h1,
     .login-info p {
-    margin: 0 0 8px;
+        margin: 0 0 8px;
     }
+
     .login-form {
         background-color: #ffffff;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         border-radius: 10px;
     }
 }

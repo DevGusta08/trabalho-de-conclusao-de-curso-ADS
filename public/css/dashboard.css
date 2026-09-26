@@ -119,6 +119,7 @@ body {
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 1.5rem;
 }
+
 .abas .aba {
   padding: 0.6rem 1rem;
   border: none;
@@ -128,9 +129,11 @@ body {
   color: #888;
   border-bottom: 2px solid transparent;
 }
+
 .abas .aba:hover {
   color: #0d8e8b;
 }
+
 .abas .aba-ativa {
   color: #0d8e8b;
   font-weight: 600;

@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -19,7 +20,7 @@ html, body {
     width: 100%;
     max-width: clamp(320px, 90%, 30rem);
     margin: 24px;
-    padding: 16px 20px;    
+    padding: 16px 20px;
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -70,7 +71,7 @@ html, body {
 }
 
 .register-container button[type="submit"]:hover {
-  background-color: #0a6f6c;
+    background-color: #0a6f6c;
 }
 
 .register-container p {
@@ -89,7 +90,9 @@ html, body {
 }
 
 @media (max-width: 764px) {
-    html, body {
+
+    html,
+    body {
         background-color: #f0f2f5;
     }
 
