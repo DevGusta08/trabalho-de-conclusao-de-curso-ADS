@@ -35,6 +35,21 @@ function renderizarSidebar() {
 renderizarSidebar();
 renderizarMaterias();
 
+function renderizarMaterias() {
+  materiasContainer.innerHTML = "";
+  const area = areas.find((a) => a.nome === areaSelecionada);
+
+  area.materias.forEach((materia) => {
+    const materiaDiv = document.createElement("div");
+    materiaDiv.classList.add("materia-card");
+
+    const materiaTitulo = document.createElement("h3");
+    materiaTitulo.textContent = materia.nome;
+    materiaDiv.appendChild(materiaTitulo);
+    materiasContainer.appendChild(materiaDiv);
+  });
+};
+
 const destaquesContainer = document.getElementById("destaques-container");
 function renderizarDestaques() {
   destaquesContainer.innerHTML = "";
@@ -57,18 +72,3 @@ function renderizarDestaques() {
   destaquesContainer.appendChild(cardSugestao);
 }
 renderizarDestaques();
-
-function renderizarMaterias() {
-  materiasContainer.innerHTML = "";
-  const area = areas.find((a) => a.nome === areaSelecionada);
-
-  area.materias.forEach((materia) => {
-    const materiaDiv = document.createElement("div");
-    materiaDiv.classList.add("materia-card");
-
-    const materiaTitulo = document.createElement("h3");
-    materiaTitulo.textContent = materia.nome;
-    materiaDiv.appendChild(materiaTitulo);
-    materiasContainer.appendChild(materiaDiv);
-  });
-};
