@@ -25,7 +25,7 @@ html {
 }
 
 .login-info {
-    background-image: url('../img/foto1.png'); 
+    background-image: linear-gradient(rgba(13, 142, 139, 0.55), rgba(13, 142, 139, 0.55)), url('../img/foto1.png'); 
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
@@ -121,10 +121,11 @@ button[type="submit"] {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: #ffffff;
 }
 
 button[type="submit"]:hover {
-    background-color: #0f6fc9;
+    background-color: #0a6f6c;
 }
 
 .signup-text {
@@ -146,13 +147,13 @@ button[type="submit"]:hover {
 @media (max-width: 764px) {
     .login-container {
         flex-direction: column;
-        padding: 24px 16px;
+        padding: 32px 20px;
         height: auto;
         min-height: 100vh;
         justify-content: center;
         gap: 24px;
         align-items: center;
-        background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%);
+        background-color: #f0f2f5;
     }
     .login-info, .login-form {
         max-width: 100%;
@@ -163,7 +164,7 @@ button[type="submit"]:hover {
         background-color: #e0f7fa;
     }
     .login-info {
-        color: #feffff;
+        color: #0d5c5a;
         background-color: transparent;
         text-align: center;
     }
