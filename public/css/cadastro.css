@@ -25,6 +25,10 @@ html, body {
     text-align: center;
 }
 
+.register-container button[type="submit"]:hover {
+  background-color: #0a6f6c;
+}
+
 .register-container h1 {
     margin-bottom: 18px;
     color: #0d8e8b;
@@ -83,11 +87,15 @@ html, body {
 
 @media (max-width: 764px) {
     html, body {
-        background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%);
+        background-color: #f0f2f5;
     }
 
     .register-container {
         border-radius: 22px;
         padding: 24px;
+    }
+
+    .register-container h1 {
+        font-size: 1.6rem;
     }
 }
