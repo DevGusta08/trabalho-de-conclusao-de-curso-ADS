@@ -1,5 +1,14 @@
 const usuario = JSON.parse(localStorage.getItem("usuario"));
 
+function getMateriasVistas() {
+  const dados = localStorage.getItem(`progresso_${usuario.id}`);
+  return dados ? JSON.parse(dados) : [];
+}
+
+function salvarMateriasVistas(lista) {
+  localStorage.setItem(`progresso_${usuario.id}`, JSON.stringify(lista));
+}
+
 if (!usuario) {
     window.location.href = "login.html";
 };
@@ -57,6 +66,19 @@ function renderizarMaterias() {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("materia-checkbox");
+    checkbox.checked = getMateriasVistas().includes(materia.nome);
+
+    checkbox.addEventListener("change", () => {
+      const vistas = getMateriasVistas();
+
+      if (checkbox.checked) {
+        vistas.push(materia.nome);
+      } else {
+        const index = vistas.indexOf(materia.nome);
+        vistas.splice(index, 1);
+      }
+      salvarMateriasVistas(vistas);
+    });
     materiaDiv.appendChild(checkbox);
   });
 };
