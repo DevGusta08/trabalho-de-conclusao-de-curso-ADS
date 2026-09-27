@@ -212,6 +212,14 @@ body {
   flex-shrink: 0;
 }
 
+.materia-checkbox {
+  margin-left: auto;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  accent-color: #0d8e8b;
+}
+
 .secao-titulo {
   margin-bottom: 0.75rem;
   font-weight: 600;
