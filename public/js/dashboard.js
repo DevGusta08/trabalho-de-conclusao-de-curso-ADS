@@ -6,6 +6,7 @@ if (!usuario) {
 
 // Mostra o nome do usuário no header
 document.getElementById("nome-usuario").textContent = `Olá, ${usuario.nome}`;
+document.getElementById("avatar-usuario").textContent = usuario.nome.charAt(0).toUpperCase();
 
 const listaAreas = document.getElementById("lista-areas");
 const materiasContainer = document.getElementById("materias-container");
