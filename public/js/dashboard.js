@@ -43,6 +43,11 @@ function renderizarMaterias() {
     const materiaDiv = document.createElement("div");
     materiaDiv.classList.add("materia-card");
 
+    const icone = document.createElement("span");
+    icone.classList.add("materia-icone");
+    icone.textContent = materia.nome.charAt(0).toUpperCase();
+    materiaDiv.appendChild(icone);
+
     const materiaTitulo = document.createElement("h3");
     materiaTitulo.textContent = materia.nome;
     materiaDiv.appendChild(materiaTitulo);
