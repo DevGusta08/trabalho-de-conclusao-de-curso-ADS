@@ -61,18 +61,21 @@ body {
   background-color: #e1f5f4;
   border-radius: 8px;
   padding: 1.5rem;
+  border-left: 3px solid #0d8e8b;
 }
 
 .destaque-label {
-  margin: 0 0 4px 0;
+  margin: 0 0 6px 0;
   font-size: 0.75rem;
   color: #0d8e8b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .destaque-card h3 {
   margin: 0;
   font-size: 1rem;
-  color: #333;
+  color: #343333;
 }
 
 .sidebar {
@@ -165,4 +168,13 @@ body {
   margin: 0;
   font-size: 1.1rem;
   color: #333;
+}
+
+.secao-titulo {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
