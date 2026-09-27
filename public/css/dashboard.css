@@ -157,6 +157,7 @@ body {
   font-size: 0.9rem;
   color: #888;
   border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-bottom-color 0.15s ease;
 }
 
 .abas .aba:hover {

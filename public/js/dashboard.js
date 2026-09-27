@@ -53,6 +53,11 @@ function renderizarMaterias() {
     materiaTitulo.textContent = materia.nome;
     materiaDiv.appendChild(materiaTitulo);
     materiasContainer.appendChild(materiaDiv);
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.classList.add("materia-checkbox");
+    materiaDiv.appendChild(checkbox);
   });
 };
 
