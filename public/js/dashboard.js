@@ -1,11 +1,21 @@
 const usuario = JSON.parse(localStorage.getItem("usuario"));
 
+function getMateriasVistas() {
+  const dados = localStorage.getItem(`progresso_${usuario.id}`);
+  return dados ? JSON.parse(dados) : [];
+}
+
+function salvarMateriasVistas(lista) {
+  localStorage.setItem(`progresso_${usuario.id}`, JSON.stringify(lista));
+}
+
 if (!usuario) {
     window.location.href = "login.html";
 };
 
 // Mostra o nome do usuário no header
 document.getElementById("nome-usuario").textContent = `Olá, ${usuario.nome}`;
+document.getElementById("avatar-usuario").textContent = usuario.nome.charAt(0).toUpperCase();
 
 const listaAreas = document.getElementById("lista-areas");
 const materiasContainer = document.getElementById("materias-container");
@@ -35,18 +45,76 @@ function renderizarSidebar() {
 renderizarSidebar();
 renderizarMaterias();
 
+function getAreaDaMateria(nomeMateria) {
+  return areas.find((a) => a.materias.some((m) => m.nome === nomeMateria));
+}
+
+const feitosContainer = document.getElementById("feitos-container");
+function renderizarFeitos() {
+  feitosContainer.innerHTML = "";
+  const vistas = getMateriasVistas();
+
+  if (vistas.length === 0) {
+    feitosContainer.innerHTML = '<p class="feitos-vazio">Nenhuma matéria concluída ainda — marque uma matéria como feita para ela aparecer aqui.</p>';
+    return;
+  }
+
+  vistas.forEach((nomeMateria) => {
+    const area = getAreaDaMateria(nomeMateria);
+    const card = document.createElement("div");
+    card.classList.add("feito-card");
+    card.innerHTML = `
+      <span class="feito-check">✓</span>
+      <h3>${nomeMateria}</h3>
+      <span class="area-tag">${area ? area.nome : ""}</span>
+    `;
+    feitosContainer.appendChild(card);
+  });
+}
+renderizarFeitos();
+
 function renderizarMaterias() {
   materiasContainer.innerHTML = "";
   const area = areas.find((a) => a.nome === areaSelecionada);
+  const vistas = getMateriasVistas();
 
   area.materias.forEach((materia) => {
     const materiaDiv = document.createElement("div");
     materiaDiv.classList.add("materia-card");
 
+    const icone = document.createElement("span");
+    icone.classList.add("materia-icone");
+    icone.textContent = materia.nome.charAt(0).toUpperCase();
+    materiaDiv.appendChild(icone);
+    if (vistas.includes(materia.nome)) {
+      materiaDiv.classList.add("marcada");
+    }
+
     const materiaTitulo = document.createElement("h3");
     materiaTitulo.textContent = materia.nome;
     materiaDiv.appendChild(materiaTitulo);
     materiasContainer.appendChild(materiaDiv);
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.classList.add("materia-checkbox");
+    checkbox.checked = getMateriasVistas().includes(materia.nome);
+
+    checkbox.addEventListener("change", () => {
+      const vistas = getMateriasVistas();
+
+      if (checkbox.checked) {
+        vistas.push(materia.nome);
+      } else {
+        const index = vistas.indexOf(materia.nome);
+        vistas.splice(index, 1);
+      }
+      salvarMateriasVistas(vistas);
+      renderizarMaterias();
+      renderizarFeitos();
+      renderizarDestaques();
+    });
+    materiaDiv.appendChild(checkbox);
   });
 };
 
@@ -55,7 +123,12 @@ function renderizarDestaques() {
   destaquesContainer.innerHTML = "";
 
   const areaAtual = areas.find((a) => a.nome === areaSelecionada);
-  const materiaContinuar = areaAtual.materias[0];
+  const vistas = getMateriasVistas();
+  const nomeUltimaVista = vistas[vistas.length - 1];
+  const todasMaterias = areas.flatMap((a) => a.materias);
+  const materiaContinuar = nomeUltimaVista
+    ? todasMaterias.find((m) => m.nome === nomeUltimaVista) || areaAtual.materias[0]
+    : areaAtual.materias[0];
 
   const ultimaArea = areas[areas.length - 1];
   const materiaSugestao = ultimaArea.materias[0];
