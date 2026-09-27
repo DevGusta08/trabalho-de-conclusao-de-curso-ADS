@@ -45,9 +45,38 @@ function renderizarSidebar() {
 renderizarSidebar();
 renderizarMaterias();
 
+function getAreaDaMateria(nomeMateria) {
+  return areas.find((a) => a.materias.some((m) => m.nome === nomeMateria));
+}
+
+const feitosContainer = document.getElementById("feitos-container");
+function renderizarFeitos() {
+  feitosContainer.innerHTML = "";
+  const vistas = getMateriasVistas();
+
+  if (vistas.length === 0) {
+    feitosContainer.innerHTML = '<p class="feitos-vazio">Nenhuma matéria concluída ainda — marque uma matéria como feita para ela aparecer aqui.</p>';
+    return;
+  }
+
+  vistas.forEach((nomeMateria) => {
+    const area = getAreaDaMateria(nomeMateria);
+    const card = document.createElement("div");
+    card.classList.add("feito-card");
+    card.innerHTML = `
+      <span class="feito-check">✓</span>
+      <h3>${nomeMateria}</h3>
+      <span class="area-tag">${area ? area.nome : ""}</span>
+    `;
+    feitosContainer.appendChild(card);
+  });
+}
+renderizarFeitos();
+
 function renderizarMaterias() {
   materiasContainer.innerHTML = "";
   const area = areas.find((a) => a.nome === areaSelecionada);
+  const vistas = getMateriasVistas();
 
   area.materias.forEach((materia) => {
     const materiaDiv = document.createElement("div");
@@ -57,6 +86,9 @@ function renderizarMaterias() {
     icone.classList.add("materia-icone");
     icone.textContent = materia.nome.charAt(0).toUpperCase();
     materiaDiv.appendChild(icone);
+    if (vistas.includes(materia.nome)) {
+      materiaDiv.classList.add("marcada");
+    }
 
     const materiaTitulo = document.createElement("h3");
     materiaTitulo.textContent = materia.nome;
@@ -78,6 +110,9 @@ function renderizarMaterias() {
         vistas.splice(index, 1);
       }
       salvarMateriasVistas(vistas);
+      renderizarMaterias();
+      renderizarFeitos();
+      renderizarDestaques();
     });
     materiaDiv.appendChild(checkbox);
   });
@@ -88,7 +123,12 @@ function renderizarDestaques() {
   destaquesContainer.innerHTML = "";
 
   const areaAtual = areas.find((a) => a.nome === areaSelecionada);
-  const materiaContinuar = areaAtual.materias[0];
+  const vistas = getMateriasVistas();
+  const nomeUltimaVista = vistas[vistas.length - 1];
+  const todasMaterias = areas.flatMap((a) => a.materias);
+  const materiaContinuar = nomeUltimaVista
+    ? todasMaterias.find((m) => m.nome === nomeUltimaVista) || areaAtual.materias[0]
+    : areaAtual.materias[0];
 
   const ultimaArea = areas[areas.length - 1];
   const materiaSugestao = ultimaArea.materias[0];
