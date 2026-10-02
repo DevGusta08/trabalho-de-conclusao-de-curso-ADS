@@ -10,8 +10,14 @@ function salvarMateriasVistas(lista) {
 }
 
 if (!usuario) {
-    window.location.href = "login.html";
-};
+  window.location.replace("login.html");
+}
+
+window.addEventListener("pageshow", () => {
+  if (!localStorage.getItem("usuario")) {
+    window.location.replace("login.html");
+  }
+});
 
 // Mostra o nome do usuário no header
 document.getElementById("nome-usuario").textContent = `Olá, ${usuario.nome}`;

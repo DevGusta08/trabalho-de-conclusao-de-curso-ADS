@@ -58,3 +58,9 @@ if (!usuario) {
     recomendacoesContainer.appendChild(grupo);
   });
 }
+
+window.addEventListener("pageshow", () => {
+  if (!localStorage.getItem("usuario")) {
+    window.location.replace("login.html");
+  }
+});
