@@ -113,8 +113,8 @@ body {
   align-items: center;
   gap: 0.75rem;
   background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
   padding: 1rem 1.25rem;
 }
 
@@ -133,21 +133,26 @@ body {
 
 .feito-card h3 {
   font-size: 1rem;
-  color: #333;
+  color: #1b2530;
+  font-weight: 600;
 }
 
 .feito-card span.area-tag {
   margin-left: auto;
-  font-size: 0.75rem;
-  color: #999;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #0d8e8b;
+  background-color: #e1f5f4;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
 }
 
 .feitos-vazio {
   font-size: 0.85rem;
-  color: #999;
+  color: #5b6672;
   padding: 1rem;
-  border: 1px dashed #ddd;
-  border-radius: 8px;
+  border: 1px dashed #cfd4da;
+  border-radius: 10px;
 }
 
 .sidebar {
