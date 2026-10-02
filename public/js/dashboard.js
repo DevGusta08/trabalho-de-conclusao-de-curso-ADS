@@ -145,3 +145,8 @@ function renderizarDestaques() {
   destaquesContainer.appendChild(cardSugestao);
 }
 renderizarDestaques();
+
+document.getElementById('btn-sair').addEventListener('click', () => {
+  localStorage.removeItem('usuario');
+  window.location.replace('login.html');
+});
