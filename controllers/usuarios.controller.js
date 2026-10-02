@@ -31,7 +31,17 @@ async function buscarPorId(req, res) {
 // cria a lógica de registro de usuário com hash de senha criptografada.
 async function criar(req, res) {
     try {
-        const {nome, email, senha} = req.body;
+        const { senha } = req.body;
+        const nome = (req.body.nome || '').trim().replace(/\s+/g, ' ');
+        const email = (req.body.email || '').trim().toLowerCase();
+
+        if (!nome || !email || !senha) {
+            return res.status(400).json({ error: 'Preencha nome, email e senha.' });
+        }
+
+        if (senha.length < 8) {
+            return res.status(400).json({ error: 'A senha deve ter pelo menos 8 caracteres.' });
+        }
         const senhaHash = await bcrypt.hash(senha, 10);
         await pool.query('INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)', [nome, email, senhaHash]);
 

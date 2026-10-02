@@ -20,7 +20,8 @@ window.addEventListener("pageshow", () => {
 });
 
 // Mostra o nome do usuário no header
-document.getElementById("nome-usuario").textContent = `Olá, ${usuario.nome}`;
+const primeiroNome = usuario.nome.trim().split(" ")[0];
+document.getElementById("nome-usuario").textContent = `Olá, ${primeiroNome}`;
 document.getElementById("avatar-usuario").textContent = usuario.nome.charAt(0).toUpperCase();
 
 const listaAreas = document.getElementById("lista-areas");

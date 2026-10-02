@@ -4,7 +4,13 @@ const bcrypt = require('bcryptjs');
 // lógica de autenticação de login
 async function login(req, res) {
     try {
-        const {email, senha} = req.body;
+        const { senha } = req.body;
+        const email = (req.body.email || '').trim().toLowerCase();
+
+        if (!email || !senha) {
+            return res.status(400).json({error: 'Preencha email e senha.'});
+        }
+
         const [usuarios] = await pool.query('SELECT * FROM usuarios WHERE email = ?', [email]);
 
         if (usuarios.length === 0) {

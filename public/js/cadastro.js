@@ -6,12 +6,17 @@ const erroCadastro = document.getElementById("erro-cadastro");
 formCadastro.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
   const senha = document.getElementById("senha").value;
   const confirmarSenha = document.getElementById("confirmar-senha").value;
 
   erroCadastro.textContent = "";
+
+  if (senha.length < 8) {
+    erroCadastro.textContent = "A senha deve ter pelo menos 8 caracteres.";
+    return;
+  }
 
   if (senha !== confirmarSenha) {
     erroCadastro.textContent = "As senhas não coincidem.";
