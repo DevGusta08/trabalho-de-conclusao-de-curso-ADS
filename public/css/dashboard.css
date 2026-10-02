@@ -65,6 +65,25 @@ body {
   font-size: 0.9rem;
 }
 
+.dashboard-titulo {
+  margin-bottom: 2rem;
+}
+
+.dashboard-titulo h1 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: #1b2530;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-titulo p {
+  font-size: 1rem;
+  color: #5b6672;
+}
+
 .dashboard-layout {
   display: grid;
   grid-template-columns: 200px 1fr;
