@@ -325,3 +325,41 @@ body {
   margin: 2.5rem auto;
   padding: 0 1.5rem;
 }
+
+#recomendacoes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recomendacao-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.recomendacao-card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.recomendacao-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recomendacao-grupo-titulo {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1b2530;
+  margin-bottom: 0.25rem;
+}
