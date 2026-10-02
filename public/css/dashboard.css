@@ -156,13 +156,16 @@ body {
   background-color: #fff;
   border-radius: 10px;
   padding: 1.25rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e4e8;  
   height: fit-content;
 }
 
 .sidebar-titulo {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #5b6672;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin-bottom: 12px;
 }
 
@@ -179,13 +182,15 @@ body {
   border-left: 3px solid transparent;
   background: none;
   border-radius: 6px;
+  color: #5b6672;
   cursor: pointer;
+  font-family: inherit;
   font-size: 1rem;
   transition: background-color 0.15s ease, border-left-color 0.15s ease;
 }
 
 .sidebar-lista button:hover {
-  background-color: #f0f0f0;
+  color: #1b2530;
 }
 
 .sidebar-lista button.area-ativa {
