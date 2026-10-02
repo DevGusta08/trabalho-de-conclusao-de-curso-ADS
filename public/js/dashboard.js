@@ -95,6 +95,10 @@ function renderizarMaterias() {
     materiaDiv.appendChild(materiaTitulo);
     materiasContainer.appendChild(materiaDiv);
 
+    materiaDiv.addEventListener("click", (evento) => {
+      if (evento.target.type === "checkbox") return;
+      window.location.href = `materia.html?materia=${encodeURIComponent(materia.nome)}`;
+    });
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("materia-checkbox");
