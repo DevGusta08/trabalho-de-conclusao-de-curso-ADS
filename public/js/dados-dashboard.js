@@ -11,6 +11,31 @@ const areas = [
             link: "https://www.youtube.com/watch?v=hdMFlAv5GkU&list=PLTPg64KdGgYjMtxN9pJGBaenIRwNX1EtI",
           },
           {
+            tipo: "video",
+            titulo: "Grandezas Proporcionais",
+            link: "https://youtu.be/XVPo3mD3LIU?si=m3GourL_xwqCbpEE",
+          },
+          {
+            tipo: "video",
+            titulo: "Funções do 2° grau",
+            link: "https://youtu.be/ZpW9Xb5iyt4?si=2JFyqDLhdXxGl725",
+          },
+          {
+            tipo: "video",
+            titulo: "Geometria plana",
+            link: "https://youtu.be/EzGf1UEnnsY?si=8TQ8hLUEDtS5Ny5G",
+          },
+          {
+            tipo: "video",
+            titulo: "Estatística",
+            link: "https://youtu.be/IgoKxQK5hGQ?si=4a1UmEXEsDEh3XA7",
+          },
+          {
+            tipo: "video",
+            titulo: "Probabilidade",
+            link: "https://youtu.be/iNCkGogNtKI?si=OfId-vxmo3vt8IxJ",
+          },
+          {
             tipo: "artigo",
             titulo: "Resumo de Geometria Plana para o Enem",
             link: "https://seusaber.com.br/geometria-plana-no-enem-resumo-aula-e-exercicios/",
