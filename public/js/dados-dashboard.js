@@ -22,6 +22,100 @@ const areas = [
           },
         ],
       },
+      {
+        nome: "Física",
+        recomendacoes: [
+          {
+            tipo: "video",
+            titulo:  "1° Lei de Newton",
+            link: "https://youtu.be/YTcRXSOGij4?si=9NKQN_zGYnd43CLL",
+          },
+          {
+            tipo: "video",
+            titulo: "Eletrodinâmica",
+            link: "https://youtu.be/NHygBtPHmKM?si=O6uG9WEX7pk341HC",
+          },
+          {
+            tipo: "video",
+            titulo: "Termologia",
+            link: "https://youtu.be/k55FRnyARg0?si=1YAs8PNgDmyE6gGf",
+          }, 
+          {
+            tipo: "video",
+            titulo: "Ondulatória",
+            link: "https://youtu.be/0WeaGRPun94?si=XYsaB1A3QY-CZFLZ",
+          },
+          {
+            tipo: "video",
+            titulo: "Cinemática",
+            link: "https://youtu.be/tAdgPJq2wpg?si=4TS2l_YOqgjEeULW",
+          },
+          {
+            tipo: "video",
+            titulo: "Tudo sobre Óptica",
+            link: "https://youtu.be/UMn7hAfpU6o?si=V4f6ClToo5OQWqG_",
+          },
+          {   tipo: "artigo",
+            titulo: "O que é a primeira lei de Newton?",
+            link: "https://pt.khanacademy.org/science/physics/forces-newtons-laws/newtons-laws-of-motion/a/what-is-newtons-first-law?referrer=share_link",
+          },
+          {
+            tipo: "artigo",
+            titulo: "Resumo sobre Eletrodinâmica",
+            link: "https://brasilescola.uol.com.br/fisica/eletrodinamica.htm",                   
+          }, 
+          {
+            tipo: "artigo",
+            titulo: "O que é Termologia? Resumo",
+            link: "https://brasilescola.uol.com.br/fisica/termologia.htm",
+          },
+          {
+            tipo: "artigo",
+            titulo: "Fundamentos de Ondulatória",
+            link: "https://meuartigo.brasilescola.uol.com.br/fisica/fundamentos-conceituais-ondulatoria-basica.htm",
+          },
+          {
+            tipo: "artigo",
+            titulo: "Tudo sobre cinemática",
+            link: "https://brasilescola.uol.com.br/fisica/introducao-cinematica.htm",
+          },
+          {
+            tipo: "artigo",
+            titulo: "Óptica",
+            link: "https://brasilescola.uol.com.br/fisica/optica.htm",
+          },
+          {
+            tipo: "livro",
+            titulo: "As três leis de Newton",
+            link: "https://www.amazon.com.br/TR%C3%8AS-LEIS-NEWTON-PROBLEMAS-RESOLVIDOS-ebook/dp/B01CX8OTDA",
+          },
+          { 
+            tipo: "livro",
+            titulo: "Eletrodinâmica",
+            link: "https://www.amazon.com.br/Eletrodin%C3%A2mica-Eleandro-Feij%C3%B3/dp/B0CB4ZPQ6Y",
+          },
+          {
+            tipo: "livro",
+            titulo: "Tudo sobre Tormologia",
+            link: "https://www.amazon.com.br/Termologia-Fen%C3%B4menos-T%C3%A9rmicos-Exerc%C3%ADcios-Resolvidos-ebook/dp/B08LCTRKPY",
+          },
+          {
+            tipo: "livro",
+            titulo: "Ondulatória",
+            link: "https://www.amazon.com.br/F%C3%ADsica-pra-quem-precisa-Ondulat%C3%B3ria-ebook/dp/B0G3ND18MG",
+          },
+          {
+            tipo: "livro",
+            titulo: "Cinemática",
+            link: "https://www.amazon.com.br/F%C3%ADsica-Cl%C3%A1ssica-Cinem%C3%A1tica-Sergio-Calcada/dp/8570568851",
+          },
+          {
+            tipo: "livro",
+            titulo: "Óptica",
+            link: "https://www.amazon.com.br/%C3%93PTICA-F%C3%8DSICA-Volumen-Luz-Spanish/dp/B0GQW7NVKN",
+          },
+        ],
+      },
     ],
   },
   {
