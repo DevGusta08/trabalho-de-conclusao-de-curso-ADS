@@ -6,11 +6,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 const usuariosRoutes = require('./routes/usuarios.routes');
 const loginRoutes = require('./routes/login.routes');
+const path = require('path');
 
-// Método básico de Rota com GET
+// Raiz do site entrega a home
 app.get('/', (req, res) => {
-    res.send('Servidor ligado!');
+    res.sendFile(path.join(__dirname, 'views', 'home.html'));
 });
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/views', express.static(path.join(__dirname, 'views')));
 app.use(cors());
 app.use(express.json());
 app.use(loginRoutes);
