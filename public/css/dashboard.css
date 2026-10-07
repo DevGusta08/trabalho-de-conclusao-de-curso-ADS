@@ -384,7 +384,17 @@ body {
   .dashboard-header {
     padding: 1rem 1.25rem;
   }
+
   .usuario-info {
     gap: 0.5rem;
+  }
+
+  .materia-pagina {
+     margin: 1.5rem auto;
+  }
+  
+  .recomendacao-card {
+    padding: 1rem 1.25rem;
+    overflow-wrap: anywhere;
   }
 }
