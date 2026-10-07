@@ -113,7 +113,7 @@ body {
 
 .destaques-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 1.25rem;
 }
 
@@ -141,7 +141,7 @@ body {
 
 .feitos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 1.25rem;
 }
 
@@ -246,7 +246,7 @@ body {
 
 .materias-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
   gap: 1.25rem;
 }
 
@@ -379,5 +379,12 @@ body {
   .sidebar-lista button {
     white-space: nowrap;
     flex-shrink: 0;
+  }
+
+  .dashboard-header {
+    padding: 1rem 1.25rem;
+  }
+  .usuario-info {
+    gap: 0.5rem;
   }
 }
