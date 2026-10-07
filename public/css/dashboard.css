@@ -363,3 +363,21 @@ body {
   color: #1b2530;
   margin-bottom: 0.25rem;
 }
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .sidebar-lista {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-lista button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
