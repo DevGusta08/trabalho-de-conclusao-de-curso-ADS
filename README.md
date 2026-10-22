@@ -263,7 +263,7 @@ Arquivo principal responsável pela inicialização e configuração do servidor
 # 📂 Estrutura do Projeto
 
 ```text
-trabalho-de-conclusao-de-curso/
+trabalho-de-conclusao-de-curso-ADS/
 │
 ├── config/
 │   └── db.js
@@ -301,6 +301,7 @@ trabalho-de-conclusao-de-curso/
 │   ├── login.html
 │   └── materia.html
 │
+├── .env.example
 ├── .env
 ├── .gitignore
 ├── package.json
@@ -383,7 +384,7 @@ git clone https://github.com/DevGusta08/trabalho-de-conclusao-de-curso-ADS.git
 Entre na pasta do projeto:
 
 ```bash
-cd trabalho-de-conclusao-de-curso
+cd trabalho-de-conclusao-de-curso-ADS
 ```
 
 ---
@@ -402,9 +403,7 @@ Esse comando instalará as dependências definidas no arquivo `package.json`.
 
 ## 3. 🗄️ Configurar o Banco de Dados
 
-Abra o **MySQL Workbench** e crie ou selecione o banco de dados utilizado pela aplicação.
-
-Em seguida, execute o arquivo:
+Abra o **MySQL Workbench** e execute o arquivo:
 
 ```text
 schema.sql
@@ -416,9 +415,7 @@ Esse arquivo contém a estrutura necessária para criação das tabelas do siste
 
 ## 4. 🔐 Configurar as Variáveis de Ambiente
 
-Na raiz do projeto existe um arquivo `.env`.
-
-Configure as informações necessárias para conexão com o banco de dados.
+Na raiz do projeto existe um arquivo `.env.example`. Faça uma cópia dele com o nome `.env` e preencha com os dados do seu MySQL.
 
 Exemplo:
 
@@ -426,7 +423,7 @@ Exemplo:
 DB_HOST=localhost
 DB_USER=seu_usuario
 DB_PASSWORD=sua_senha
-DB_NAME=vestmais
+DB_NAME=tcc_vestibular
 PORT=3000
 ```
 
