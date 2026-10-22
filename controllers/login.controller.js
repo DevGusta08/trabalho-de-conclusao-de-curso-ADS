@@ -1,5 +1,6 @@
 const pool = require('../config/db')
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 // lógica de autenticação de login
 async function login(req, res) {
@@ -24,8 +25,15 @@ async function login(req, res) {
             return res.status(401).json({error: 'Email ou senha inválidos'})
         }
 
+        const token = jwt.sign(
+            { id: usuario.id },
+            process.env.JWT_SECRET,
+            { expiresIn: '2h' }
+        );
+
         res.status(200).json({
             mensagem: 'Login realizado com sucesso!',
+            token,
             usuario: {
             id: usuario.id,
             nome: usuario.nome,
