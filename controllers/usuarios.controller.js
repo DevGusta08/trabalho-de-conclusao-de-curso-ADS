@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 // cria a lógica de listagem de usuário.
 async function listar(req, res) {
     try {
-        const [usuarios] = await pool.query('SELECT * FROM usuarios');
+        const [usuarios] = await pool.query('SELECT id, nome, email FROM usuarios');
         res.json(usuarios);
     } catch (error) {
         console.error(error);
@@ -16,7 +16,7 @@ async function listar(req, res) {
 async function buscarPorId(req, res) {
     try {
         const {id} = req.params;
-        const [usuarios] = await pool.query('SELECT * FROM usuarios WHERE id = ?', [id]);
+        const [usuarios] = await pool.query('SELECT id, nome, email FROM usuarios WHERE id = ?', [id]);
 
         if (usuarios.length === 0) {
             return res.status(404).json({error: 'Usuário não encontrado'});
