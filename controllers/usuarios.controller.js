@@ -47,6 +47,9 @@ async function criar(req, res) {
 
         res.status(201).json({mensagem: 'Usuário criado com sucesso!'});
     } catch (error) {
+        if (error.code === 'ER_DUP_ENTRY') {
+            return res.status(409).json({ error: 'Este e-mail já está cadastrado.' });
+        }
         console.error(error);
         res.status(500).json({error:'Deu erro'});
     }    
