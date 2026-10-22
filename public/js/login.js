@@ -26,6 +26,7 @@ formLogin.addEventListener("submit", async (event) => {
     }
 
     // login deu certo -> guarda o usuário e redireciona pro dashboard
+    localStorage.setItem("token", dados.token);
     localStorage.setItem("usuario", JSON.stringify(dados.usuario));
     window.location.href = "dashboard.html";
   } catch (erro) {

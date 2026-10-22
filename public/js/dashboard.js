@@ -159,5 +159,6 @@ renderizarDestaques();
 
 document.getElementById('btn-sair').addEventListener('click', () => {
   localStorage.removeItem('usuario');
+  localStorage.removeItem('token');
   window.location.replace('login.html');
 });
