@@ -1,6 +1,6 @@
 const areas = [
   {
-    nome: "Exatas",
+    nome: "Matemática",
     materias: [
       {
         nome: "Matemática",
@@ -47,6 +47,52 @@ const areas = [
           },
         ],
       },
+    ],
+  },
+  {
+    nome: "Linguagens, Códigos e suas Tecnologias",
+    materias: [
+      
+       {
+        nome: "Português",
+        recomendacoes: [
+          {
+            tipo: "video",
+            titulo: "Como estruturar uma redação nota 1000",
+            link: "https://www.youtube.com/watch?v=EXEMPLO4",
+          },
+          {
+            tipo: "artigo",
+            titulo: "Figuras de linguagem mais cobradas no Enem",
+            link: "https://exemplo.com/artigo-figuras",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    nome: "Redação",
+    materias: [
+      {
+        nome: "Redação",
+        recomendacoes: [
+          {
+            tipo: "video",
+            titulo: "Genética Mendeliana - Aula 1",
+            link: "https://www.youtube.com/watch?v=EXEMPLO3",
+          },
+          {
+            tipo: "artigo",
+            titulo: "Ecologia: cadeias e teias alimentares",
+            link: "https://exemplo.com/artigo-ecologia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    nome: "Ciências da natureza",
+    materias: [
       {
         nome: "Física",
         recomendacoes: [
@@ -141,63 +187,75 @@ const areas = [
           },
         ],
       },
-    ],
-  },
-  {
-    nome: "Humanas",
-    materias: [
+
       {
-        nome: "História",
+        nome: "Química",
         recomendacoes: [
           {
             tipo: "video",
-            titulo: "Era Vargas - Resumo para o vestibular",
-            link: "https://www.youtube.com/watch?v=EXEMPLO2",
+            titulo:  "1° Lei de Newton",
+            link: "https://youtu.be/YTcRXSOGij4?si=9NKQN_zGYnd43CLL",
           },
-          {
-            tipo: "artigo",
-            titulo: "Linha do tempo da Independência do Brasil",
-            link: "https://exemplo.com/artigo-historia",
-          },
+  
         ],
       },
-    ],
-  },
-  {
-    nome: "Biológicas",
-    materias: [
+
       {
         nome: "Biologia",
         recomendacoes: [
           {
             tipo: "video",
-            titulo: "Genética Mendeliana - Aula 1",
-            link: "https://www.youtube.com/watch?v=EXEMPLO3",
+            titulo:  "1° Lei de Newton",
+            link: "https://youtu.be/YTcRXSOGij4?si=9NKQN_zGYnd43CLL",
           },
-          {
-            tipo: "artigo",
-            titulo: "Ecologia: cadeias e teias alimentares",
-            link: "https://exemplo.com/artigo-ecologia",
-          },
+  
         ],
       },
     ],
   },
   {
-    nome: "Linguagens",
+    nome: "Ciências Humanas",
     materias: [
       {
-        nome: "Português",
+        nome: "História",
         recomendacoes: [
           {
-            tipo: "video",
-            titulo: "Como estruturar uma redação nota 1000",
-            link: "https://www.youtube.com/watch?v=EXEMPLO4",
+            tipo: "",
+            titulo: "",
+            link: ""
           },
+        ],
+      },
+
+      {
+        nome: "Geografia",
+        recomendacoes: [
           {
-            tipo: "artigo",
-            titulo: "Figuras de linguagem mais cobradas no Enem",
-            link: "https://exemplo.com/artigo-figuras",
+            tipo: "",
+            titulo: "",
+            link: ""
+          },
+        ],
+      },
+
+      {
+        nome: "Filosofia",
+        recomendacoes: [
+          {
+            tipo: "",
+            titulo: "",
+            link: ""
+          },
+        ],
+      },
+
+      {
+        nome: "Sociologia",
+        recomendacoes: [
+          {
+            tipo: "",
+            titulo: "",
+            link: ""
           },
         ],
       },
