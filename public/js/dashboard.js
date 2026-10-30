@@ -1,4 +1,8 @@
 const usuario = JSON.parse(localStorage.getItem("usuario"));
+if (!usuario) {
+  window.location.replace("login.html");
+  throw new Error("Não autenticado");
+}
 
 function getMateriasVistas() {
   const dados = localStorage.getItem(`progresso_${usuario.id}`);
@@ -7,10 +11,6 @@ function getMateriasVistas() {
 
 function salvarMateriasVistas(lista) {
   localStorage.setItem(`progresso_${usuario.id}`, JSON.stringify(lista));
-}
-
-if (!usuario) {
-  window.location.replace("login.html");
 }
 
 window.addEventListener("pageshow", () => {
@@ -70,11 +70,18 @@ function renderizarFeitos() {
     const area = getAreaDaMateria(nomeMateria);
     const card = document.createElement("div");
     card.classList.add("feito-card");
-    card.innerHTML = `
-      <span class="feito-check">✓</span>
-      <h3>${nomeMateria}</h3>
-      <span class="area-tag">${area ? area.nome : ""}</span>
-    `;
+    const check = document.createElement("span");
+    check.classList.add("feito-check");
+    check.textContent = "✓";
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = nomeMateria;
+
+    const tag = document.createElement("span");
+    tag.classList.add("area-tag");
+    tag.textContent = area ? area.nome : "";
+
+    card.append(check, titulo, tag);
     feitosContainer.appendChild(card);
   });
 }
