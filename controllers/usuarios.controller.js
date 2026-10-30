@@ -1,30 +1,21 @@
 const pool = require('../config/db');
 const bcrypt = require('bcryptjs');
 
-// cria a lógica de listagem de usuário.
-async function listar(req, res) {
-    try {
-        const [usuarios] = await pool.query('SELECT id, nome, email FROM usuarios');
-        res.json(usuarios);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({error: 'Deu erro'});     
-    }
-};
-
 // cria a lógica de busca por ID de usuário.
 async function buscarPorId(req, res) {
     try {
-        const {id} = req.params;
+        const id = Number(req.params.id);
+        if (id !== req.usuarioId) {
+            return res.status(403).json({ error: 'Sem permissão.' });
+        }
         const [usuarios] = await pool.query('SELECT id, nome, email FROM usuarios WHERE id = ?', [id]);
-
         if (usuarios.length === 0) {
-            return res.status(404).json({error: 'Usuário não encontrado'});
-        };
-        res.json(usuarios);
+            return res.status(404).json({ error: 'Usuário não encontrado.' });
+        }
+        res.json(usuarios[0]);
     } catch (error) {
         console.error(error);
-        res.status(500).json({error:'Deu erro'});
+        res.status(500).json({ error: 'Erro interno do servidor.' });
     }
 };
 
@@ -58,29 +49,40 @@ async function criar(req, res) {
 // cria lógica de atualização de usuário
 async function atualizar(req, res ){
     try {
-        const {id} = req.params;
-        const {nome, email} = req.body;
+        const id = Number(req.params.id);
+        if (id !== req.usuarioId) {
+            return res.status(403).json({ error: 'Sem permissão.' });
+        }
+        const nome = (req.body.nome || '').trim().replace(/\s+/g, ' ');
+        const email = (req.body.email || '').trim().toLowerCase();
+        if (!nome || !email) {
+            return res.status(400).json({ error: 'Preencha nome e email.' });
+        }
         await pool.query('UPDATE usuarios SET nome = ?, email = ? WHERE id = ?', [nome, email, id]);
-
-        res.status(200).json({mensagem: 'Usuário atualizado com sucesso!'});
+        res.status(200).json({ mensagem: 'Usuário atualizado com sucesso!' });
     } catch (error) {
+        if (error.code === 'ER_DUP_ENTRY') {
+            return res.status(409).json({ error: 'Este e-mail já está cadastrado.' });
+        }
         console.error(error);
-        res.status(500).json({error: 'Deu erro'});
+        res.status(500).json({ error: 'Erro interno do servidor.' });
     }
 }
 
 // função Delete do CRUD
 async function deletar(req, res) {
     try {
-        const {id} = req.params;
-        await pool.query('DELETE FROM usuarios WHERE id = ?', [id])
-
-        res.status(200).json({mensagem: 'Usuário deletado com sucesso!'})
+        const id = Number(req.params.id);
+        if (id !== req.usuarioId) {
+            return res.status(403).json({ error: 'Sem permissão.' });
+        }
+        await pool.query('DELETE FROM usuarios WHERE id = ?', [id]);
+        res.status(200).json({ mensagem: 'Usuário deletado com sucesso!' });
     } catch (error) {
         console.error(error);
-        res.status(500).json({error: 'Deu erro'})
+        res.status(500).json({ error: 'Erro interno do servidor.' });
     }
 }
 
 // exporta as funções
-module.exports = {listar, buscarPorId, criar, atualizar, deletar};
+module.exports = {buscarPorId, criar, atualizar, deletar};

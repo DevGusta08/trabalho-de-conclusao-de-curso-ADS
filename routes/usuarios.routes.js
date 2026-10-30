@@ -4,7 +4,6 @@ const usuariosController = require('../controllers/usuarios.controller');
 const autenticar = require('../middlewares/auth.middleware');
 
 // direciona as chamadas para a função desejada.
-router.get('/usuarios', autenticar, usuariosController.listar);
 router.get('/usuarios/:id', autenticar, usuariosController.buscarPorId);
 router.post('/usuarios', usuariosController.criar);
 router.put('/usuarios/:id', autenticar, usuariosController.atualizar);
