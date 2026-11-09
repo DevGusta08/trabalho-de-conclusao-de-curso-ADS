@@ -1,20 +1,18 @@
 # 📚 Vest+
 
-> Plataforma web educacional desenvolvida para auxiliar estudantes no processo de aprendizagem por meio da organização, recomendação e disponibilização de conteúdos das diferentes áreas do conhecimento.
+> Plataforma web educacional desenvolvida para auxiliar estudantes na preparação para o vestibular por meio da organização por áreas do conhecimento, da recomendação de conteúdos e do acompanhamento do progresso de estudo.
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O **Vest+** é uma plataforma web educacional desenvolvida com o objetivo de auxiliar estudantes em sua jornada de aprendizagem, oferecendo um ambiente centralizado para acesso e organização de conteúdos educacionais.
+O **Vest+** é uma plataforma web educacional criada para ajudar estudantes em sua preparação para o vestibular, oferecendo um ambiente centralizado para acesso e organização de conteúdos de estudo.
 
-A plataforma estrutura os conteúdos de acordo com diferentes **áreas do conhecimento**, que são divididas em suas respectivas **matérias e conteúdos**, permitindo que o estudante navegue de forma organizada pelos assuntos disponíveis.
+A plataforma estrutura os conteúdos de acordo com as **áreas do conhecimento** do ENEM, que são divididas em **matérias**. Para cada matéria, o estudante encontra **conteúdos recomendados** em três formatos: vídeos, artigos e livros.
 
-Além da organização dos conteúdos, o Vest+ possui como proposta oferecer **recomendações de conteúdos** de acordo com os interesses e necessidades dos estudantes, facilitando a descoberta de novos assuntos e contribuindo para uma experiência de estudo mais direcionada.
+O estudante também pode **acompanhar o próprio progresso**, marcando as matérias que já estudou. Elas passam a aparecer em uma seção própria do painel, e a plataforma sugere de onde continuar.
 
-A plataforma também possui recursos voltados à prática e ao acompanhamento da aprendizagem, como **simulados**, permitindo que os estudantes testem seus conhecimentos, e uma **área de perfil**, destinada às informações e recursos relacionados ao usuário.
-
-O projeto está sendo desenvolvido como parte do **Trabalho de Conclusão de Curso (TCC)** do curso de **Análise e Desenvolvimento de Sistemas**, da instituição **E.E. Itajahy Feitosa Martins**.
+O projeto foi desenvolvido como parte do **Trabalho de Conclusão de Curso (TCC)** do curso de **Análise e Desenvolvimento de Sistemas**, da instituição **E.E. Itajahy Feitosa Martins**.
 
 ---
 
@@ -22,135 +20,112 @@ O projeto está sendo desenvolvido como parte do **Trabalho de Conclusão de Cur
 
 ### Objetivo Geral
 
-Desenvolver uma plataforma web educacional capaz de auxiliar estudantes no processo de aprendizagem por meio da organização, disponibilização e recomendação de conteúdos relacionados às diferentes áreas do conhecimento, proporcionando uma experiência de estudo mais organizada, acessível e personalizada.
+Desenvolver uma plataforma web educacional capaz de auxiliar estudantes na preparação para o vestibular por meio da organização e da recomendação de conteúdos das diferentes áreas do conhecimento, proporcionando uma experiência de estudo mais organizada e acessível.
 
 ### Objetivos Específicos
 
-- Organizar conteúdos educacionais de acordo com diferentes áreas do conhecimento;
-- Estruturar as áreas do conhecimento em suas respectivas matérias e conteúdos;
-- Facilitar o acesso dos estudantes a conteúdos educacionais em um único ambiente;
-- Desenvolver um sistema de recomendação de conteúdos de acordo com os interesses dos estudantes;
-- Auxiliar os estudantes na descoberta de novos conteúdos relacionados aos seus interesses;
-- Disponibilizar simulados para que os estudantes possam testar seus conhecimentos;
-- Permitir que os estudantes acompanhem seu desempenho nos simulados;
-- Disponibilizar uma área de perfil para centralizar informações relacionadas ao usuário;
+- Organizar conteúdos educacionais de acordo com as áreas do conhecimento;
+- Estruturar as áreas do conhecimento em suas respectivas matérias;
+- Reunir em um único ambiente vídeos, artigos e livros recomendados para cada matéria;
+- Permitir que o estudante acompanhe seu progresso marcando as matérias já estudadas;
 - Implementar um sistema de cadastro e autenticação de usuários;
-- Desenvolver uma interface simples, intuitiva e de fácil utilização;
-- Contribuir para uma experiência de aprendizagem mais organizada e personalizada.
+- Desenvolver uma interface simples, intuitiva e responsiva.
 
 ---
 
 ## ❓ Problema
 
-Atualmente, existe uma grande quantidade de conteúdos educacionais disponíveis na internet. Embora essa variedade de informações possa ser positiva para os estudantes, a quantidade de materiais disponíveis pode dificultar a identificação de conteúdos adequados aos interesses e às necessidades de cada aluno.
+Atualmente, existe uma grande quantidade de conteúdos educacionais disponíveis na internet. Embora essa variedade seja positiva, a quantidade de materiais dificulta a identificação de conteúdos adequados às necessidades de cada estudante.
 
-Além disso, os conteúdos educacionais podem estar distribuídos em diferentes plataformas e fontes, fazendo com que o estudante precise realizar diversas pesquisas para encontrar materiais relacionados a uma determinada matéria ou área do conhecimento.
+Além disso, os conteúdos estão distribuídos em diferentes plataformas e fontes, fazendo com que o estudante precise realizar diversas pesquisas para encontrar materiais de uma determinada matéria ou área do conhecimento.
 
-Outro problema está relacionado à organização dos estudos. Sem uma estrutura adequada, o estudante pode ter dificuldades para identificar quais conteúdos estudar, quais assuntos precisam ser revisados e como acompanhar seu próprio desempenho.
+Outro problema está relacionado à organização dos estudos. Sem uma estrutura adequada, o estudante pode ter dificuldade para saber o que já estudou, o que ainda falta e por onde continuar.
 
-Diante desse cenário, surge a necessidade de uma plataforma que reúna conteúdos educacionais em um único ambiente, organizando-os por áreas do conhecimento, matérias e conteúdos, além de oferecer recursos de recomendação e simulados.
-
-O Vest+ busca atender a essa necessidade por meio de uma plataforma que centraliza esses recursos e proporciona ao estudante uma experiência de aprendizagem mais organizada e direcionada.
+O Vest+ busca atender a essa necessidade por meio de uma plataforma que centraliza os conteúdos, organiza-os por áreas e matérias e permite acompanhar o progresso de estudo.
 
 ---
 
 ## 💡 Justificativa
 
-A escolha do desenvolvimento do Vest+ surgiu da necessidade de oferecer aos estudantes uma ferramenta que facilite o acesso e a organização de conteúdos educacionais.
+A escolha pelo desenvolvimento do Vest+ surgiu da necessidade de oferecer aos estudantes uma ferramenta que facilite o acesso e a organização de conteúdos educacionais para o vestibular.
 
-Ao reunir diferentes conteúdos em uma única plataforma e organizá-los por áreas do conhecimento e matérias, o sistema busca reduzir a dificuldade encontrada pelos estudantes durante a procura por materiais de estudo.
+Ao reunir diferentes conteúdos em uma única plataforma e organizá-los por áreas do conhecimento e matérias, o sistema reduz a dificuldade encontrada durante a procura por materiais de estudo.
 
-O sistema de recomendação também possui um papel importante na proposta da plataforma, pois busca auxiliar o estudante na descoberta de conteúdos relacionados aos seus interesses, tornando a experiência de navegação e aprendizagem mais direcionada.
-
-Além disso, a utilização de simulados permite que o estudante coloque em prática os conhecimentos adquiridos e tenha uma percepção sobre seu desempenho.
-
-A área de perfil, por sua vez, possibilita a centralização das informações relacionadas ao estudante e pode servir como base para futuras funcionalidades de personalização e acompanhamento.
-
-Dessa forma, o Vest+ propõe uma solução que combina **organização de conteúdos, recomendação, prática por meio de simulados, autenticação e recursos relacionados ao perfil do estudante**, buscando contribuir para uma experiência de aprendizagem mais acessível, organizada e personalizada.
+A recomendação de vídeos, artigos e livros por matéria auxilia o estudante a escolher o formato de estudo que prefere, enquanto o acompanhamento de progresso o ajuda a manter o controle sobre o que já foi estudado.
 
 ---
 
 # 🚀 Funcionalidades
 
-## 📚 Áreas do Conhecimento
+## 📚 Áreas do Conhecimento e Matérias
 
-A plataforma organiza os conteúdos de acordo com diferentes áreas do conhecimento, permitindo que o estudante explore os assuntos de maneira estruturada.
+O conteúdo é organizado em cinco áreas, cada uma dividida em matérias:
 
-As áreas servem como uma forma de classificação dos conteúdos, facilitando a navegação e a localização de assuntos relacionados.
+| Área | Matérias |
+|------|----------|
+| Matemática e suas Tecnologias | 5 |
+| Ciências da Natureza e suas Tecnologias | 3 |
+| Ciências Humanas e suas Tecnologias | 3 |
+| Linguagens, Códigos e suas Tecnologias | 2 |
+| Redação | 1 |
 
----
-
-## 📖 Matérias
-
-Cada área do conhecimento é dividida em suas respectivas matérias.
-
-Essa organização permite que o estudante selecione uma determinada matéria e encontre conteúdos relacionados ao assunto escolhido.
-
----
-
-## 📄 Conteúdos Educacionais
-
-Os conteúdos são organizados dentro das matérias correspondentes, permitindo que os estudantes tenham acesso aos materiais de estudo de forma estruturada.
-
-Essa organização busca facilitar a navegação e evitar que o estudante precise procurar conteúdos em diferentes locais.
+As áreas funcionam como forma de classificação dos conteúdos e podem ser navegadas pela barra lateral do painel.
 
 ---
 
-## 🎯 Recomendação de Conteúdos
+## 🎯 Conteúdos Recomendados
 
-Uma das principais propostas do Vest+ é oferecer recomendações de conteúdos aos estudantes.
+Ao clicar em uma matéria, o estudante acessa uma página com os conteúdos recomendados para ela, agrupados por tipo:
 
-A partir dos interesses e das interações do usuário com a plataforma, o sistema poderá apresentar conteúdos relacionados às áreas e matérias de interesse.
+- **Vídeos**
+- **Artigos**
+- **Livros**
 
-O objetivo da recomendação é auxiliar o estudante na descoberta de novos assuntos e tornar a experiência de aprendizagem mais direcionada.
-
----
-
-## 📝 Simulados
-
-A plataforma disponibiliza simulados como uma forma de permitir que os estudantes pratiquem os conteúdos estudados.
-
-Por meio dos simulados, o estudante poderá testar seus conhecimentos e identificar possíveis assuntos que necessitam de maior atenção ou revisão.
+Cada recomendação leva ao material externo correspondente, que abre em uma nova aba.
 
 ---
 
-## 📊 Acompanhamento de Desempenho
+## ✅ Acompanhamento de Progresso
 
-Os resultados obtidos nos simulados podem ser utilizados para auxiliar o estudante no acompanhamento de seu desempenho.
+Cada matéria possui uma caixa de seleção para ser marcada como estudada. A partir disso:
 
-Esse recurso busca permitir uma percepção maior sobre o nível de conhecimento do usuário e, futuramente, poderá contribuir para recomendações ainda mais personalizadas.
+- A matéria aparece na seção **Feitos** do painel, com a indicação da sua área;
+- Na lista de matérias, as já estudadas ficam visualmente destacadas;
+- O card **Continuar de onde parou** mostra a última matéria marcada.
 
----
-
-## 👤 Perfil do Estudante
-
-A plataforma possui uma área destinada ao perfil do estudante.
-
-Essa área centraliza informações relacionadas ao usuário e fornece uma base para recursos de personalização da experiência dentro da plataforma.
+O progresso é salvo no navegador (`localStorage`), separado por usuário.
 
 ---
 
 ## 🔐 Cadastro e Autenticação
 
-O Vest+ possui sistema de cadastro e login para permitir que os estudantes tenham acesso individualizado à plataforma.
+O Vest+ possui cadastro e login para que cada estudante tenha acesso individualizado à plataforma.
 
-O processo de autenticação é responsável por verificar os dados do usuário e controlar seu acesso aos recursos que necessitam de identificação.
+- A senha deve ter pelo menos 8 caracteres e é armazenada com hash (**bcryptjs**);
+- E-mails são normalizados e não podem ser repetidos;
+- O login retorna um **token JWT**, com validade de 2 horas, usado para acessar as rotas protegidas;
+- As tentativas de login são limitadas (10 a cada 15 minutos) para dificultar ataques de força bruta;
+- As páginas do painel e das matérias redirecionam para o login quando não há usuário autenticado.
 
 ---
 
 ## 🏠 Página Inicial
 
-A página inicial apresenta a proposta do Vest+ e funciona como ponto de entrada para a plataforma.
-
-A partir dela, o usuário pode conhecer a finalidade do sistema e acessar os principais recursos disponíveis.
+A página inicial apresenta a proposta do Vest+ e funciona como ponto de entrada, com acesso ao login e ao cadastro.
 
 ---
 
-## 📊 Dashboard
+## 📊 Painel (Dashboard)
 
-Após realizar o acesso à plataforma, o estudante possui acesso ao dashboard.
+Após o login, o estudante acessa o painel de estudos, composto por:
 
-O dashboard funciona como uma área central para apresentar informações e recursos relacionados à experiência do usuário dentro do Vest+.
+- **Barra lateral** com as áreas do conhecimento;
+- **Feitos:** matérias já marcadas como estudadas;
+- **Em destaque:** *Continuar de onde parou* e *Sugestão da semana*;
+- **Matérias:** cards das matérias da área selecionada;
+- **Cabeçalho** com o nome do usuário, avatar e botão **Sair**.
+
+O painel e a página de matérias são responsivos.
 
 ---
 
@@ -158,105 +133,73 @@ O dashboard funciona como uma área central para apresentar informações e recu
 
 ## 🎨 Front-end
 
-### HTML5
-
-Utilizado para a estruturação das páginas e elementos da interface da aplicação.
-
-### CSS3
-
-Utilizado para estilização, organização visual e definição da aparência das páginas.
-
-### JavaScript
-
-Utilizado para implementar comportamentos e interações no lado do cliente.
-
----
+- **HTML5:** estruturação das páginas;
+- **CSS3:** estilização e responsividade;
+- **JavaScript:** interações, comunicação com a API (`fetch`) e armazenamento local (`localStorage`);
+- **Google Fonts:** fontes Sora e Inter.
 
 ## ⚙️ Back-end
 
-### Node.js
-
-Ambiente de execução utilizado para o desenvolvimento do servidor da aplicação.
-
-### Express.js
-
-Framework utilizado para criação do servidor, definição das rotas e gerenciamento das requisições HTTP.
-
-### Pool
-
-Utilizado para gerenciamento das conexões com o banco de dados.
-
-### Bcrypt
-
-Biblioteca utilizada para realizar o processamento seguro das senhas dos usuários por meio de hash.
-
-### Dotenv
-
-Utilizado para carregar variáveis de ambiente armazenadas no arquivo `.env`.
-
----
+- **Node.js:** ambiente de execução do servidor;
+- **Express.js (v5):** criação do servidor, definição das rotas e gerenciamento das requisições HTTP;
+- **MySQL2:** comunicação com o banco de dados, com uso de *pool* de conexões;
+- **bcryptjs:** hash das senhas dos usuários;
+- **jsonwebtoken:** geração e validação dos tokens de autenticação (JWT);
+- **express-rate-limit:** limitação de tentativas na rota de login;
+- **dotenv:** carregamento das variáveis de ambiente do arquivo `.env`.
 
 ## 🗄️ Banco de Dados
 
-### MySQL
+- **MySQL:** banco de dados relacional;
+- **MySQL Workbench:** gerenciamento e administração do banco.
 
-Banco de dados relacional utilizado para armazenamento das informações da aplicação.
-
-Entre os dados armazenados estão informações relacionadas aos usuários e aos demais recursos utilizados pelo sistema.
-
-### MySQL Workbench
-
-Ferramenta utilizada para gerenciamento, desenvolvimento e administração do banco de dados MySQL.
-
----
+Atualmente, a aplicação utiliza a tabela `usuarios`. O arquivo `schema.sql` também define as tabelas `areas`, `materias`, `recomendacoes` e `progresso`, que já deixam modelada a migração futura dos conteúdos e do progresso para o banco. Por enquanto, os conteúdos ficam em `public/js/dados-dashboard.js` e o progresso no `localStorage`.
 
 ## 🔧 Ferramentas
 
 - Visual Studio Code
-- Git
-- GitHub
+- Git e GitHub
 - npm
 - MySQL Workbench
+- Postman (testes das rotas)
 
 ---
 
 # 🏗️ Arquitetura do Projeto
 
-O Vest+ foi estruturado de forma a separar as responsabilidades entre diferentes partes da aplicação.
-
-Essa organização facilita a manutenção do código, permite uma melhor divisão das responsabilidades e possibilita a evolução da plataforma.
+O Vest+ separa as responsabilidades entre diferentes partes da aplicação, o que facilita a manutenção e a evolução do código.
 
 ### `routes/`
 
-Responsável pela definição das rotas da aplicação e pelo direcionamento das requisições para os respectivos controllers.
+Define as rotas da aplicação e direciona as requisições para os controllers correspondentes.
 
 ### `controllers/`
 
-Responsável pelo processamento das requisições e pela execução das regras necessárias para o funcionamento das funcionalidades da aplicação.
+Contém a lógica de cada rota: validação dos dados, consultas ao banco e respostas. O gerenciamento de usuários (`usuarios.controller.js`) é separado da autenticação (`login.controller.js`).
+
+### `middlewares/`
+
+Contém o middleware de autenticação, que valida o token JWT antes de liberar o acesso às rotas protegidas.
 
 ### `views/`
 
-Contém as páginas HTML utilizadas na interface da plataforma.
+Contém as páginas HTML da interface.
 
 ### `public/`
 
-Contém os arquivos públicos utilizados pelo front-end da aplicação, incluindo:
-
-- Arquivos CSS;
-- Scripts JavaScript;
-- Imagens.
+Arquivos estáticos usados pelo front-end: CSS, scripts JavaScript e imagens. O próprio servidor Express serve as pastas `public/` e `views/`.
 
 ### `config/`
 
-Contém arquivos relacionados às configurações da aplicação, incluindo a configuração da conexão com o banco de dados.
+Configuração da conexão com o banco de dados.
 
 ### `schema.sql`
 
-Arquivo responsável por armazenar a estrutura do banco de dados, incluindo a definição das tabelas utilizadas pela aplicação.
+Estrutura do banco de dados, com a criação do banco `tcc_vestibular` e das tabelas.
 
 ### `server.js`
 
-Arquivo principal responsável pela inicialização e configuração do servidor da aplicação.
+Arquivo principal: inicializa o servidor e registra os middlewares e rotas.
 
 ---
 
@@ -272,8 +215,10 @@ trabalho-de-conclusao-de-curso-ADS/
 │   ├── login.controller.js
 │   └── usuarios.controller.js
 │
+├── middlewares/
+│   └── auth.middleware.js
+│
 ├── public/
-│   │
 │   ├── css/
 │   │   ├── cadastro.css
 │   │   ├── dashboard.css
@@ -302,7 +247,6 @@ trabalho-de-conclusao-de-curso-ADS/
 │   └── materia.html
 │
 ├── .env.example
-├── .env
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
@@ -315,47 +259,44 @@ trabalho-de-conclusao-de-curso-ADS/
 
 # 🔄 Funcionamento Geral
 
-O funcionamento básico da plataforma pode ser representado pelo seguinte fluxo:
-
 ```text
-                    ┌─────────────────┐
-                    │   Página Inicial │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │  Cadastro/Login │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │    Dashboard    │
-                    └────────┬────────┘
-                             │
-             ┌───────────────┼───────────────┐
-             │               │               │
-             ▼               ▼               ▼
-       ┌──────────┐    ┌──────────┐    ┌──────────┐
-       │   Áreas  │    │ Matérias │    │  Perfil  │
-       │Conhecim. │    │          │    │          │
-       └────┬─────┘    └────┬─────┘    └──────────┘
-            │               │
-            └───────┬───────┘
-                    ▼
-             ┌──────────────┐
-             │  Conteúdos   │
-             └──────┬───────┘
-                    │
-                    ▼
-             ┌──────────────┐
-             │  Simulados   │
-             └──────┬───────┘
-                    │
-                    ▼
-             ┌──────────────┐
-             │  Desempenho  │
-             └──────────────┘
+        ┌──────────────────┐
+        │  Página Inicial  │
+        └────────┬─────────┘
+                 │
+                 ▼
+        ┌──────────────────┐
+        │  Cadastro/Login  │
+        └────────┬─────────┘
+                 │
+                 ▼
+        ┌──────────────────┐
+        │     Dashboard    │
+        │ (áreas, matérias │
+        │   e progresso)   │
+        └────────┬─────────┘
+                 │
+                 ▼
+        ┌──────────────────┐
+        │ Página da matéria│
+        │ (vídeos, artigos │
+        │     e livros)    │
+        └──────────────────┘
 ```
+
+---
+
+# 🔌 Rotas da API
+
+| Método | Rota | Descrição | Autenticação |
+|--------|------|-----------|--------------|
+| `POST` | `/usuarios` | Cadastra um novo usuário | Não |
+| `POST` | `/login` | Autentica o usuário e retorna o token JWT | Não |
+| `GET` | `/usuarios/:id` | Busca os dados (id, nome, e-mail) do usuário | Sim |
+| `PUT` | `/usuarios/:id` | Atualiza nome e e-mail do usuário | Sim |
+| `DELETE` | `/usuarios/:id` | Remove o usuário | Sim |
+
+As rotas protegidas exigem o cabeçalho `Authorization: Bearer <token>`, e o usuário só pode acessar ou alterar a **própria** conta.
 
 ---
 
@@ -363,27 +304,16 @@ O funcionamento básico da plataforma pode ser representado pelo seguinte fluxo:
 
 ## 📋 Pré-requisitos
 
-Antes de executar o projeto, é necessário possuir as seguintes ferramentas instaladas:
-
-- [Node.js](https://nodejs.org/)
-- npm
+- [Node.js](https://nodejs.org/) e npm
 - [Git](https://git-scm.com/)
-- MySQL
-- MySQL Workbench
+- MySQL e MySQL Workbench
 
 ---
 
 ## 1. 📥 Clonar o Repositório
 
-Clone o repositório utilizando:
-
 ```bash
 git clone https://github.com/DevGusta08/trabalho-de-conclusao-de-curso-ADS.git
-```
-
-Entre na pasta do projeto:
-
-```bash
 cd trabalho-de-conclusao-de-curso-ADS
 ```
 
@@ -391,65 +321,51 @@ cd trabalho-de-conclusao-de-curso-ADS
 
 ## 2. 📦 Instalar as Dependências
 
-Execute:
-
 ```bash
 npm install
 ```
 
-Esse comando instalará as dependências definidas no arquivo `package.json`.
-
 ---
 
-## 3. 🗄️ Configurar o Banco de Dados
+## 3. 🗄️ Criar o Banco de Dados
 
-Abra o **MySQL Workbench** e execute o arquivo:
-
-```text
-schema.sql
-```
-
-Esse arquivo contém a estrutura necessária para criação das tabelas do sistema.
+Abra o **MySQL Workbench** e execute o arquivo `schema.sql`. Ele cria o banco `tcc_vestibular` e todas as tabelas.
 
 ---
 
 ## 4. 🔐 Configurar as Variáveis de Ambiente
 
-Na raiz do projeto existe um arquivo `.env.example`. Faça uma cópia dele com o nome `.env` e preencha com os dados do seu MySQL.
-
-Exemplo:
+Na raiz do projeto, copie o arquivo `.env.example` com o nome `.env` e preencha com os seus dados:
 
 ```env
 DB_HOST=localhost
-DB_USER=seu_usuario
+DB_USER=root
 DB_PASSWORD=sua_senha
 DB_NAME=tcc_vestibular
 PORT=3000
+JWT_SECRET=troque_por_uma_chave_aleatoria_longa
 ```
 
-> Os nomes das variáveis devem corresponder aos utilizados no arquivo `config/db.js`.
+- `JWT_SECRET` é **obrigatória**: sem ela o servidor não inicia. Use uma chave longa e aleatória. Uma forma de gerar:
 
-**Importante:** o arquivo `.env` não deve ser enviado para o GitHub, pois pode conter informações sensíveis, como senhas e credenciais do banco de dados.
+  ```bash
+  node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+  ```
+
+- Mantenha `PORT=3000`: as telas de login e cadastro enviam as requisições para `http://localhost:3000`.
+- Opcionalmente, defina `DB_PORT` caso o seu MySQL não use a porta padrão (3306).
+
+> **Importante:** o arquivo `.env` contém credenciais e não deve ser enviado ao GitHub. Ele já está no `.gitignore`.
 
 ---
 
 ## 5. ▶️ Iniciar o Servidor
 
-Para iniciar a aplicação:
-
-```bash
-node server.js
-```
-
-Caso exista um script configurado no `package.json`, também poderá ser utilizado:
-
 ```bash
 npm start
 ```
 
-Após iniciar o servidor, acesse a aplicação pelo endereço configurado.
-
-Exemplo:
+Acesse a aplicação em:
 
 ```text
 http://localhost:3000
@@ -461,103 +377,82 @@ http://localhost:3000
 
 ## 🏠 Página Inicial
 
-A página inicial apresenta a proposta do Vest+ e permite que o usuário conheça a plataforma e acesse seus principais recursos.
-
----
+Apresenta a proposta do Vest+ e leva ao login ou ao cadastro.
 
 ## 🔐 Login
 
-A tela de login permite que usuários cadastrados realizem sua autenticação na plataforma.
-
----
+Permite que usuários cadastrados se autentiquem na plataforma.
 
 ## 📝 Cadastro
 
-A tela de cadastro permite que novos estudantes criem uma conta no Vest+.
-
----
+Permite que novos estudantes criem uma conta, com confirmação de senha.
 
 ## 📊 Dashboard
 
-O dashboard funciona como o ambiente principal do estudante após o login, apresentando recursos e informações relacionadas à utilização da plataforma.
+Ambiente principal do estudante após o login: áreas, matérias, matérias concluídas e destaques.
 
----
+## 📚 Matéria
 
-## 📚 Matérias
-
-A página de matérias permite que o estudante navegue pelos conteúdos disponíveis de acordo com as matérias e áreas do conhecimento.
+Página que exibe os conteúdos recomendados (vídeos, artigos e livros) da matéria escolhida.
 
 ---
 
 # 🎓 Público-Alvo
 
-O Vest+ tem como público-alvo principalmente **estudantes** que desejam melhorar sua experiência de aprendizagem, organizar seus estudos e encontrar conteúdos relacionados aos seus interesses.
+O Vest+ é voltado a **estudantes que se preparam para o vestibular** e buscam um ambiente centralizado para:
 
-A plataforma busca atender estudantes que procuram um ambiente centralizado para:
-
-- Explorar diferentes áreas do conhecimento;
-- Acessar matérias e conteúdos;
-- Descobrir novos assuntos;
-- Praticar por meio de simulados;
-- Acompanhar seu desempenho;
-- Organizar sua experiência de estudo.
+- Explorar as áreas do conhecimento;
+- Acessar matérias e conteúdos recomendados;
+- Acompanhar o que já estudaram;
+- Organizar sua rotina de estudo.
 
 ---
 
 # 📈 Resultados Esperados
 
-Espera-se que o Vest+ contribua para tornar o acesso aos conteúdos educacionais mais organizado e eficiente.
-
-Por meio da organização dos conteúdos em áreas do conhecimento, matérias e conteúdos, o estudante poderá encontrar os assuntos de maneira mais estruturada.
-
-O sistema de recomendação busca facilitar a descoberta de novos conteúdos relacionados aos interesses do usuário.
-
-Além disso, os simulados podem proporcionar uma forma prática de testar os conhecimentos adquiridos e identificar possíveis dificuldades.
-
-Dessa maneira, espera-se que a plataforma proporcione uma experiência de aprendizagem mais **organizada, acessível, direcionada e personalizada**.
-
----
-
-# 🔮 Trabalhos Futuros
-
-Como possíveis melhorias e extensões para o projeto, podem ser consideradas:
-
-- Aprimoramento do sistema de recomendação;
-- Desenvolvimento de recomendações baseadas no desempenho do estudante;
-- Expansão das áreas do conhecimento disponíveis;
-- Inclusão de novas matérias;
-- Ampliação da quantidade de conteúdos educacionais;
-- Ampliação da quantidade de simulados;
-- Implementação de histórico de desempenho;
-- Implementação de histórico de conteúdos acessados;
-- Sistema de favoritos;
-- Personalização avançada do perfil;
-- Melhorias na acessibilidade da plataforma;
-- Desenvolvimento de uma versão para dispositivos móveis;
-- Implementação de novos recursos de apoio aos estudos;
-- Utilização dos resultados dos simulados para aperfeiçoar as recomendações de conteúdo.
+Espera-se que o Vest+ torne o acesso aos conteúdos de estudo mais organizado e eficiente. Ao organizar o material em áreas e matérias, o estudante encontra os assuntos de maneira estruturada, e o acompanhamento de progresso ajuda a manter o controle sobre o que já foi estudado.
 
 ---
 
 # 🔒 Segurança
 
-O projeto utiliza mecanismos voltados à proteção das informações dos usuários.
-
-As senhas dos usuários não devem ser armazenadas diretamente em texto simples no banco de dados. Para isso, o projeto utiliza a biblioteca **Bcrypt**, responsável pela aplicação de funções de hash às senhas.
-
-As informações de configuração e acesso ao banco de dados são armazenadas por meio de **variáveis de ambiente**, utilizando o arquivo `.env`.
-
-O arquivo `.env` é protegido pelo `.gitignore` para evitar que informações sensíveis sejam disponibilizadas no repositório.
+- **Senhas:** nunca são armazenadas em texto simples; o hash é feito com **bcryptjs**, e a senha nunca é retornada pela API;
+- **Autenticação:** o login gera um token **JWT** com validade de 2 horas, exigido nas rotas de usuários (exceto o cadastro);
+- **Autorização:** o usuário só consegue consultar, alterar ou remover a própria conta;
+- **Força bruta:** a rota de login limita as tentativas (10 a cada 15 minutos);
+- **Consultas ao banco:** utilizam parâmetros (`?`), o que protege contra SQL Injection;
+- **Variáveis de ambiente:** credenciais do banco e a chave do JWT ficam no `.env`, protegido pelo `.gitignore`.
 
 ---
 
 # 📌 Considerações Técnicas
 
-A aplicação foi desenvolvida utilizando uma arquitetura baseada em Node.js e Express.js, com separação entre rotas, controllers, arquivos de interface e recursos públicos.
+A aplicação utiliza uma arquitetura baseada em Node.js e Express.js, com separação entre rotas, controllers, middlewares, arquivos de interface e recursos públicos. O mesmo servidor Express entrega o front-end e a API.
 
-Essa organização permite que diferentes partes do sistema sejam modificadas de maneira independente, facilitando a manutenção e evolução da aplicação.
+O MySQL armazena os dados dos usuários. Os conteúdos recomendados ficam em um arquivo JavaScript no front-end (`dados-dashboard.js`) e o progresso de estudo fica no `localStorage` do navegador, decisão tomada para manter o escopo do projeto adequado ao prazo do TCC.
 
-O banco de dados MySQL é responsável pelo armazenamento das informações persistentes utilizadas pela plataforma, enquanto o Node.js realiza a comunicação entre a aplicação e o banco de dados.
+## Limitações conhecidas
+
+- O progresso é salvo no navegador, portanto não é sincronizado entre dispositivos;
+- O link "Esqueci minha senha" ainda não possui funcionalidade;
+- O token de autenticação é guardado no `localStorage` do navegador;
+- Os conteúdos recomendados são fixos e iguais para todos os usuários.
+
+---
+
+# 🔮 Trabalhos Futuros
+
+- **Simulados** por área do conhecimento, para que o estudante teste seus conhecimentos;
+- **Acompanhamento de desempenho** com histórico dos resultados nos simulados;
+- **Recomendações personalizadas**, baseadas nos interesses e no desempenho do estudante;
+- **Área de perfil** do estudante;
+- Migração dos conteúdos e do progresso para o banco de dados (tabelas já modeladas no `schema.sql`);
+- Recuperação de senha ("Esqueci minha senha");
+- Expansão das áreas, matérias e conteúdos disponíveis;
+- Histórico de conteúdos acessados e sistema de favoritos;
+- Indicador de progresso percentual por matéria e por área;
+- Melhorias de acessibilidade;
+- Testes automatizados.
 
 ---
 
@@ -603,5 +498,5 @@ Este projeto foi desenvolvido para fins **acadêmicos e educacionais**, como par
 ---
 
 <p align="center">
-  📚 <strong>Vest+</strong> — Aprender, praticar e evoluir.
+  📚 <strong>Vest+</strong> — Organizar, estudar e evoluir.
 </p>
