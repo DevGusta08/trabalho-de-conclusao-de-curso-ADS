@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 const usuariosRoutes = require('./routes/usuarios.routes');
 const loginRoutes = require('./routes/login.routes');
@@ -12,6 +13,7 @@ if (!process.env.JWT_SECRET) {
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(helmet());
 app.use(express.json());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/views', express.static(path.join(__dirname, 'views')));
