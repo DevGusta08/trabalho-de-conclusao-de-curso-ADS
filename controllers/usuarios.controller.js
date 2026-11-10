@@ -42,7 +42,7 @@ async function criar(req, res) {
             return res.status(409).json({ error: 'Este e-mail já está cadastrado.' });
         }
         console.error(error);
-        res.status(500).json({error:'Deu erro'});
+        res.status(500).json({error:'Erro interno do servidor.'});
     }    
 };
 

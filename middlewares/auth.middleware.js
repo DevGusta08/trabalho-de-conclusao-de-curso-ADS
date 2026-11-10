@@ -9,7 +9,7 @@ function autenticar(req, res, next) {
     }
 
     try {
-        const dados = jwt.verify(token, process.env.JWT_SECRET);
+        const dados = jwt.verify(token, process.env.JWT_SECRET, { algorithms: ['HS256'] });
         req.usuarioId = dados.id;
         next();
     } catch (error) {
