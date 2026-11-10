@@ -1,5 +1,6 @@
 const pool = require('../config/db');
 const bcrypt = require('bcryptjs');
+const { validarNome, validarEmail, validarSenha } = require('../utils/validacoes');
 
 // cria a lógica de busca por ID de usuário.
 async function buscarPorId(req, res) {
@@ -33,6 +34,12 @@ async function criar(req, res) {
         if (senha.length < 8) {
             return res.status(400).json({ error: 'A senha deve ter pelo menos 8 caracteres.' });
         }
+
+        const erro = validarNome(nome) || validarEmail(email) || validarSenha(senha);
+        if (erro) {
+            return res.status(400).json({ error: erro });
+        }
+
         const senhaHash = await bcrypt.hash(senha, 10);
         await pool.query('INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)', [nome, email, senhaHash]);
 
@@ -57,6 +64,11 @@ async function atualizar(req, res ){
         const email = (req.body.email || '').trim().toLowerCase();
         if (!nome || !email) {
             return res.status(400).json({ error: 'Preencha nome e email.' });
+        }
+        
+        const erro = validarNome(nome) || validarEmail(email);
+        if (erro) {
+            return res.status(400).json({ error: erro });
         }
         await pool.query('UPDATE usuarios SET nome = ?, email = ? WHERE id = ?', [nome, email, id]);
         res.status(200).json({ mensagem: 'Usuário atualizado com sucesso!' });
