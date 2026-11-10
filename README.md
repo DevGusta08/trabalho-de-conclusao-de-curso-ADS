@@ -81,7 +81,7 @@ Ao clicar em uma matéria, o estudante acessa uma página com os conteúdos reco
 - **Artigos**
 - **Livros**
 
-Cada recomendação leva ao material externo correspondente, que abre em uma nova aba.
+Os artigos levam a páginas específicas. Nas matérias de Matemática, Biologia, Química, Física e Redação, o topo dos vídeos traz uma playlist de um canal conhecido de preparação para o ENEM. Os demais vídeos e os livros levam a resultados de busca (YouTube e Google Livros) sobre o assunto. Todos os links abrem em uma nova aba.
 
 ---
 
@@ -111,7 +111,7 @@ O Vest+ possui cadastro e login para que cada estudante tenha acesso individuali
 
 ## 🏠 Página Inicial
 
-A página inicial apresenta a proposta do Vest+ e funciona como ponto de entrada, com acesso ao login e ao cadastro.
+A página inicial apresenta a proposta do Vest+ e funciona como ponto de entrada, com acesso ao login e ao cadastro, e termina em um rodapé com os créditos do projeto.
 
 ---
 
@@ -182,6 +182,10 @@ Contém a lógica de cada rota: validação dos dados, consultas ao banco e resp
 
 Contém o middleware de autenticação, que valida o token JWT antes de liberar o acesso às rotas protegidas.
 
+### `scripts/`
+
+Contém o `gerar-links.js`, um script de uso único que preenche os links de vídeos e livros do `dados-dashboard.js` (playlists por matéria e links de busca). Ele não faz parte da execução da aplicação.
+
 ### `utils/`
 
 Contém as regras de validação de nome, e-mail e senha, compartilhadas entre o cadastro e a atualização de usuários.
@@ -231,7 +235,8 @@ trabalho-de-conclusao-de-curso-ADS/
 │   │   └── style.css
 │   │
 │   ├── img/
-│   │   └── foto1.png
+│   │   ├── foto1.png
+│   │   └── logo1.svg
 │   │
 │   └── js/
 │       ├── auth.js
@@ -244,6 +249,9 @@ trabalho-de-conclusao-de-curso-ADS/
 ├── routes/
 │   ├── login.routes.js
 │   └── usuarios.routes.js
+│
+├── scripts/
+│   └── gerar-links.js
 │
 ├── utils/
 │   └── validacoes.js
@@ -440,14 +448,15 @@ Espera-se que o Vest+ torne o acesso aos conteúdos de estudo mais organizado e 
 
 A aplicação utiliza uma arquitetura baseada em Node.js e Express.js, com separação entre rotas, controllers, middlewares, arquivos de interface e recursos públicos. O mesmo servidor Express entrega o front-end e a API.
 
-O MySQL armazena os dados dos usuários. Os conteúdos recomendados ficam em um arquivo JavaScript no front-end (`dados-dashboard.js`) e o progresso de estudo fica no `localStorage` do navegador, decisão tomada para manter o escopo do projeto adequado ao prazo do TCC.
+O MySQL armazena os dados dos usuários. Os conteúdos recomendados ficam em um arquivo JavaScript no front-end (`dados-dashboard.js`) e o progresso de estudo fica no `localStorage` do navegador, decisão tomada para manter o escopo do projeto adequado ao prazo do TCC. Os links de vídeos e livros desse arquivo são gerados pelo script `scripts/gerar-links.js`.
 
 ## Limitações conhecidas
 
 - O progresso é salvo no navegador, portanto não é sincronizado entre dispositivos;
 - O link "Esqueci minha senha" ainda não possui funcionalidade;
 - O token de autenticação é guardado no `localStorage` do navegador;
-- Os conteúdos recomendados são fixos e iguais para todos os usuários.
+- Os conteúdos recomendados são fixos e iguais para todos os usuários;
+- As matérias de Matemática, Biologia, Química, Física e Redação têm uma playlist de um canal conhecido; os demais vídeos e todos os livros levam a resultados de busca (YouTube e Google Livros), e não a um vídeo ou livro específico.
 
 ---
 
@@ -461,6 +470,7 @@ O MySQL armazena os dados dos usuários. Os conteúdos recomendados ficam em um 
 - Recuperação de senha ("Esqueci minha senha");
 - Telas de edição e exclusão de conta, com confirmação de senha para excluir;
 - Armazenar o token em cookie `HttpOnly`, em vez do `localStorage`;
+- Curadoria de playlists para as matérias de Humanas e Linguagens, e de vídeos e livros específicos para cada assunto;
 - Expansão das áreas, matérias e conteúdos disponíveis;
 - Histórico de conteúdos acessados e sistema de favoritos;
 - Indicador de progresso percentual por matéria e por área;
