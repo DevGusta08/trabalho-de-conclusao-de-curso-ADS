@@ -101,11 +101,11 @@ O progresso é salvo no navegador (`localStorage`), separado por usuário.
 
 O Vest+ possui cadastro e login para que cada estudante tenha acesso individualizado à plataforma.
 
-- A senha deve ter pelo menos 8 caracteres e é armazenada com hash (**bcryptjs**);
-- E-mails são normalizados e não podem ser repetidos;
+- Os dados são validados no servidor: nome de até 100 caracteres, e-mail em formato válido de até 150 caracteres e senha de 8 caracteres a 72 bytes;
+- A senha é armazenada com hash (**bcryptjs**), e os e-mails são normalizados e não podem ser repetidos;
 - O login retorna um **token JWT**, com validade de 2 horas, usado para acessar as rotas protegidas;
-- As tentativas de login são limitadas (10 a cada 15 minutos) para dificultar ataques de força bruta;
-- As páginas do painel e das matérias redirecionam para o login quando não há usuário autenticado.
+- Ao abrir o painel ou uma matéria, o front-end confirma o token com o servidor; se ele estiver inválido ou expirado, o usuário é desconectado e volta para o login;
+- As tentativas de login (10 a cada 15 minutos) e de cadastro (20 por hora, por IP) são limitadas para dificultar abusos.
 
 ---
 
@@ -145,7 +145,8 @@ O painel e a página de matérias são responsivos.
 - **MySQL2:** comunicação com o banco de dados, com uso de *pool* de conexões;
 - **bcryptjs:** hash das senhas dos usuários;
 - **jsonwebtoken:** geração e validação dos tokens de autenticação (JWT);
-- **express-rate-limit:** limitação de tentativas na rota de login;
+- **express-rate-limit:** limitação de tentativas nas rotas de login e de cadastro;
+- **helmet:** cabeçalhos HTTP de segurança (incluindo a Content-Security-Policy);
 - **dotenv:** carregamento das variáveis de ambiente do arquivo `.env`.
 
 ## 🗄️ Banco de Dados
@@ -180,6 +181,10 @@ Contém a lógica de cada rota: validação dos dados, consultas ao banco e resp
 ### `middlewares/`
 
 Contém o middleware de autenticação, que valida o token JWT antes de liberar o acesso às rotas protegidas.
+
+### `utils/`
+
+Contém as regras de validação de nome, e-mail e senha, compartilhadas entre o cadastro e a atualização de usuários.
 
 ### `views/`
 
@@ -229,6 +234,7 @@ trabalho-de-conclusao-de-curso-ADS/
 │   │   └── foto1.png
 │   │
 │   └── js/
+│       ├── auth.js
 │       ├── cadastro.js
 │       ├── dados-dashboard.js
 │       ├── dashboard.js
@@ -238,6 +244,9 @@ trabalho-de-conclusao-de-curso-ADS/
 ├── routes/
 │   ├── login.routes.js
 │   └── usuarios.routes.js
+│
+├── utils/
+│   └── validacoes.js
 │
 ├── views/
 │   ├── cadastro.html
@@ -290,13 +299,13 @@ trabalho-de-conclusao-de-curso-ADS/
 
 | Método | Rota | Descrição | Autenticação |
 |--------|------|-----------|--------------|
-| `POST` | `/usuarios` | Cadastra um novo usuário | Não |
+| `POST` | `/usuarios` | Cadastra um novo usuário (limite de 20 por hora, por IP) | Não |
 | `POST` | `/login` | Autentica o usuário e retorna o token JWT | Não |
 | `GET` | `/usuarios/:id` | Busca os dados (id, nome, e-mail) do usuário | Sim |
 | `PUT` | `/usuarios/:id` | Atualiza nome e e-mail do usuário | Sim |
 | `DELETE` | `/usuarios/:id` | Remove o usuário | Sim |
 
-As rotas protegidas exigem o cabeçalho `Authorization: Bearer <token>`, e o usuário só pode acessar ou alterar a **própria** conta.
+As rotas protegidas exigem o cabeçalho `Authorization: Bearer <token>`, e o usuário só pode acessar ou alterar a **própria** conta. Dados inválidos retornam `400`, e-mail já cadastrado retorna `409`, e excesso de tentativas retorna `429`.
 
 ---
 
@@ -417,9 +426,11 @@ Espera-se que o Vest+ torne o acesso aos conteúdos de estudo mais organizado e 
 # 🔒 Segurança
 
 - **Senhas:** nunca são armazenadas em texto simples; o hash é feito com **bcryptjs**, e a senha nunca é retornada pela API;
-- **Autenticação:** o login gera um token **JWT** com validade de 2 horas, exigido nas rotas de usuários (exceto o cadastro);
+- **Autenticação:** o login gera um token **JWT** (algoritmo HS256) com validade de 2 horas, exigido nas rotas de usuários (exceto o cadastro) e verificado pelo front-end ao abrir o painel e as matérias;
 - **Autorização:** o usuário só consegue consultar, alterar ou remover a própria conta;
-- **Força bruta:** a rota de login limita as tentativas (10 a cada 15 minutos);
+- **Força bruta e abuso:** o login limita as tentativas (10 a cada 15 minutos) e o cadastro limita a criação de contas (20 por hora, por IP);
+- **Validação de entrada:** nome, e-mail e senha são validados no servidor antes de chegar ao banco;
+- **Cabeçalhos HTTP:** o **helmet** adiciona cabeçalhos de segurança, como a Content-Security-Policy;
 - **Consultas ao banco:** utilizam parâmetros (`?`), o que protege contra SQL Injection;
 - **Variáveis de ambiente:** credenciais do banco e a chave do JWT ficam no `.env`, protegido pelo `.gitignore`.
 
@@ -448,6 +459,8 @@ O MySQL armazena os dados dos usuários. Os conteúdos recomendados ficam em um 
 - **Área de perfil** do estudante;
 - Migração dos conteúdos e do progresso para o banco de dados (tabelas já modeladas no `schema.sql`);
 - Recuperação de senha ("Esqueci minha senha");
+- Telas de edição e exclusão de conta, com confirmação de senha para excluir;
+- Armazenar o token em cookie `HttpOnly`, em vez do `localStorage`;
 - Expansão das áreas, matérias e conteúdos disponíveis;
 - Histórico de conteúdos acessados e sistema de favoritos;
 - Indicador de progresso percentual por matéria e por área;
