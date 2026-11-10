@@ -1,7 +1,7 @@
 {
   "name": "tcc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vest+: plataforma web educacional de preparação para o vestibular",
   "homepage": "https://github.com/DevGusta08/trabalho-de-conclusao-de-curso-ADS#readme",
   "bugs": {
     "url": "https://github.com/DevGusta08/trabalho-de-conclusao-de-curso-ADS/issues"
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/DevGusta08/trabalho-de-conclusao-de-curso-ADS.git"
   },
-  "license": "ISC",
-  "author": "",
+  "license": "UNLICENSED",
+  "author": "Equipe Vest+",
   "type": "commonjs",
   "main": "server.js",
   "scripts": {
