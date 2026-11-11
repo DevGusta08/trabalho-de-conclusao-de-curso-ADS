@@ -21,16 +21,29 @@
         <div class="dashboard-titulo">
             <h1 id="materia-nome"></h1>
             <p id="materia-area"></p>
+            <div class="materia-progresso">
+                <p id="materia-progresso-texto" class="materia-progresso-texto"></p>
+                <div class="barra">
+                    <div id="materia-progresso-barra" class="barra-preenchimento"></div>
+                </div>
+            </div>
         </div>
+
+        <section id="gerais-secao" hidden>
+            <p class="secao-titulo">Para começar</p>
+            <div id="gerais-container" class="subtopico-links"></div>
+        </section>
+
         <section>
-            <p class="secao-titulo">Conteúdos recomendados</p>
-            <div id="recomendacoes-container">
-                <!-- recomendações inseridas aqui pelo JS -->
+            <p class="secao-titulo">Subtópicos</p>
+            <div id="subtopicos-container">
+                <!-- blocos de subtópico inseridos aqui pelo JS -->
             </div>
         </section>
     </main>
     <script src="../public/js/auth.js"></script>
     <script src="../public/js/dados-dashboard.js"></script>
+    <script src="../public/js/progresso.js"></script>
     <script src="../public/js/materia.js"></script>
 </body>
 
