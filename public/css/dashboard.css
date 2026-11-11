@@ -334,12 +334,6 @@ body {
   padding: 0 1.5rem;
 }
 
-#recomendacoes-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .recomendacao-card {
   display: flex;
   flex-direction: column;
@@ -358,18 +352,106 @@ body {
   transform: translateY(-1px);
 }
 
-.recomendacao-grupo {
+.materia-progresso {
+  margin-top: 1.25rem;
+  max-width: 420px;
+}
+
+.materia-progresso-texto {
+  font-size: 0.9rem;
+  color: #5b6672;
+  margin-bottom: 0.5rem;
+}
+
+.barra {
+  height: 8px;
+  background-color: #e1e4e8;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barra-preenchimento {
+  height: 100%;
+  width: 0;
+  background-color: #0d8e8b;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+#subtopicos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subtopico {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.recomendacao-grupo-titulo {
+.subtopico.estudado {
+  background-color: #f3fbfa;
+  border-color: #0d8e8b;
+}
+
+.subtopico-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.subtopico-cabecalho h2 {
   font-family: 'Sora', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #1b2530;
-  margin-bottom: 0.25rem;
+}
+
+.subtopico-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #5b6672;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.subtopico-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #0d8e8b;
+  cursor: pointer;
+}
+
+.subtopico-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subtopico .recomendacao-card,
+.subtopico-links .recomendacao-card {
+  padding: 0.75rem 1rem;
+}
+
+.recomendacao-tipo {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0d8e8b;
+}
+
+.recomendacao-card h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1b2530;
 }
 
 @media (max-width: 768px) {
